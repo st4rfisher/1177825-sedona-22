@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="index.html">
+          <img src="img/icons/logo-icon.svg">
+        </a>
+
+        <nav class="navigation">
+          <div class="navigation__wrapper">
+            <ul class="menu">
+              <li class="menu__item"><a href="index.html">Главная</a></li>
+              <li class="menu__item"><a href="catalog.html">Фото и видео</a></li>
+              <li class="menu__item"><a href="review.html">Форма отзыва</a></li>
+              <li class="menu__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+            </ul>
+          </div>
+          <button class="navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__container">
+        <div class="background">
+          <section class="welcome">
+            <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
+            <img class="welcome__text" src="img/welcome-text.svg" alt="Welcome text">
+          </section>
+        </div>
+        <section class="review">
+          <h2 class="review__title title">Оставьте свой отзыв</h2>
+          <p class="review__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <form class="review-form" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="review-form__name">
+              <legend>Представьтесь:</legend>
+              <ul class="name-list">
+                <li class="name-list__item">
+                  <label for="name">Имя*:</label>
+                  <input type="text" name="name" id="name">
+                </li>
+                <li class="name-list__item">
+                  <label for="surname">Фамилия:</label>
+                  <input class="review-form__surname" type="text" name="surname" id="surname">
+                </li>
+                <li class="name-list__item">
+                  <label for="patronymic">Отчество:</label>
+                  <input class="review-form__patronymic" type="text" name="patronymic" id="patronymic">
+                </li> 
+              </ul> 
+            </fieldset>
+
+            <fieldset class="review-form__contacts">
+              <legend>Контактная информация:</legend>
+              <ul class="contacts-list">
+                <li class="contacts-list__item">
+                  <label for="phone">Контактный телефон*:</label>
+                  <input class="review-form__phone" type="tel" name="phone" id="phone" placeholder="Введите телефон">
+                </li>
+                <li class="contacts-list__item">
+                  <label for="email">Электронная почта*:</label>
+                  <input class="review-form__email" type="email" name="email" id="email" placeholder="Введите e-mail">
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="review-form__impression">
+              <legend>Ваше общее впечатление:</legend>
+              <ul class="impression-list">
+                <li class="impression-list__item">
+                  <label for="positive">Скорее положительное</label>
+                  <input class="impression-list__option" type="radio" name="positive" id="positive" checked>
+                </li>
+                <li class="impression-list__item">
+                  <label for="negative">Скорее отрицательное</label>
+                  <input class="impression-list__option" type="radio" name="negative" id="negative">
+                </li>
+                <li class="impression-list__item">
+                  <label for="hard-to-answer">Затрудняюсь ответить</label>
+                  <input class="impression-list__option" type="radio" name="hard-to-answer" id="hard-to-answer">
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="review-form__visited">
+              <legend>Ваше общее впечатление:</legend>
+              <ul class="visited-list">
+                <li class="visited-list__item">
+                  <label for="devils-bridge">Мост Дьявола</label>
+                  <input class="visited-list__option" type="checkbox" name="devils-bridge" id="devils-bridge" checked>
+                </li>
+                <li class="visited-list__item">
+                  <label for="bell-rock">Гора-Колокол</label>
+                  <input class="visited-list__option" type="checkbox" name="bell-rock" id="bell-rock">
+                </li>
+                <li class="visited-list__item">
+                  <label for="slide-rock-state-park">Слайд-парк</label>
+                  <input class="visited-list__option" type="checkbox" name="slide-rock-state-park" id="slide-rock-state-park">
+                </li>
+                <li class="visited-list__item">
+                  <label for="red-rocks">Красные скалы</label>
+                  <input class="visited-list__option" type="checkbox" name="red-rocks" id="red-rocks">
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="review-form__review-area">
+              <legend>Опишите свои эмоции:</legend>
+              <textarea name="" id="" cols="30" rows="10" placeholder="Опишите подробно все свои восторги ">
+              </textarea>
+            </fieldset>
+
+            <button class="review-form__review-button button" type="submit">Отправить отзыв</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <a class="footer__hashtag" href="">#visitSedona</a>
+        <ul class="social">
+          <li class="social__item">
+            <span class="visually-hidden">Twitter</span>
+            <a class="social__item-link" href="">
+              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <span class="visually-hidden">Facebook</span>
+            <a class="social__item-link" href="">
+              <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6H2C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <span class="visually-hidden">Youtube</span>
+            <a class="social__item-link" href="">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__developer">
+          <span>Разработано</span>
+          <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img src="img/icons/htmlacademy-icon.svg" alt="Иконка разработчика">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+      
