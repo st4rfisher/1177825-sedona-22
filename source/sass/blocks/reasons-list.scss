@@ -1,16 +1,11 @@
 .reasons-list {
-    list-style: none;
-    background-color: $skyblue;
-    color: $white;
-    &__item {
-        @include text;
-        text-transform: uppercase;
-    }
 
-    &__item {
-        @include text;
-        text-transform: uppercase;
-    }
+  list-style: none;
+  background-color: $skyblue;
+  color: $white;
 
-
+  &__item {
+    @include text;
+    text-transform: uppercase;
+  }
 }

@@ -1,10 +1,11 @@
 .menu {
-    @include text;
-    list-style: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    a {
-        text-decoration: none;
-        color: $black;
-    }
+  @include text;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
 }
