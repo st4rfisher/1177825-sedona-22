@@ -1,0 +1,38 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  outline: 5px solid green;
+}
+
+.title {
+  @include title;
+}
+
+.reasons-item {
+  background-color: $shadow-grey;
+  color: $black;
+}
+
+.paragraph {
+  @include paragraph;
+}
+
+.link-button {
+  @include button-text;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $skyblue;
+}
+

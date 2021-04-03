@@ -1,0 +1,11 @@
+.footer {
+  outline: 2px solid blue;
+  &__hashtag {
+    background-color: transparent;
+    color: $black;
+  }
+
+  &__developer {
+    @include text;
+  }
+}

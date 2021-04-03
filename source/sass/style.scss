@@ -1,1 +1,17 @@
-// Начните писать стили здесь
+//global's styles
+@import "variables.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+@import "global.scss";
+
+//block's styles
+@import "blocks/header.scss";
+@import "blocks/menu.scss";
+@import "blocks/main.scss";
+@import "blocks/welcome.scss";
+@import "blocks/reasons.scss";
+@import "blocks/reasons-list.scss";
+@import "blocks/opportunities-list.scss";
+@import "blocks/hotel.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
