@@ -1,0 +1,41 @@
+.review-form {
+  &__fieldset {
+    border: none;
+  }
+
+  &__legend {
+    @include title;
+  }
+
+  &__name-list,
+  &__contacts-list,
+  &__impression-list,
+  &__visited-list {
+    list-style: none;
+  }
+
+  &__name-item,
+  &__contacts-item {
+    label {
+      @include text;
+    }
+
+    input {
+      @include title;
+      text-transform: none;
+    }
+  }
+
+  &__phone::placeholder,
+  &__email::placeholder {
+    color: $black;
+  }
+
+  &__impression-item,
+  &__visited-item {
+    label {
+      @include title;
+      text-transform: none;
+    }
+  }
+}
