@@ -3,3 +3,11 @@
   background-color: $white;
   color: $black;
 }
+
+.opportunities-list__item-title {
+  @include title;
+}
+
+.opportunities-list__item-paragraph {
+  @include paragraph;
+}
