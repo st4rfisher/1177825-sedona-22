@@ -1,0 +1,7 @@
+.review__title {
+  @include title;
+}
+
+.review__intro {
+  @include paragraph;
+}
