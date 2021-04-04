@@ -1,0 +1,13 @@
+.footer__container {
+  @include container;
+}
+
+.footer__hashtag {
+  @include button-link;
+  background-color: transparent;
+  color: $black;
+}
+
+.footer__developer {
+  @include text;
+}

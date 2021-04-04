@@ -1,0 +1,11 @@
+.menu {
+  @include text;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu a {
+  text-decoration: none;
+  color: $black;
+}
