@@ -1,14 +1,13 @@
-.hotel {
-  &__title {
-    @include title;
-    font-size: 21px;
-  }
-
-  &__paragraph {
-    @include paragraph;
-  }
-
-  &__search-link {
-    @include button-link;
-  }
+.hotel__title  {
+  @include title;
+  font-size: 21px;
 }
+
+.hotel__paragraph {
+  @include paragraph;
+}
+
+.hotel__search-link {
+  @include button-link;
+}
+

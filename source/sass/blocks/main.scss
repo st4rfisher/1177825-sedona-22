@@ -1,5 +1,4 @@
-.main {
-  &__container {
-    @include container;
-  }
+.main__container {
+  @include container;
 }
+

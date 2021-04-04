@@ -2,22 +2,26 @@
   list-style: none;
   background-color: $skyblue;
   color: $white;
+}
 
-  &__item {
-    @include text;
-    text-transform: uppercase;
-  }
+.reasons-list__item {
+  @include text;
+  text-transform: uppercase;
 
-  &__item-title {
-    @include title;
-  }
-
-  &__item--uncolored {
+  &--uncolored {
     background-color: $shadow-grey;
     color: $black;
   }
+}
 
-  &__item-paragraph {
-    @include paragraph;
-  }
+.reasons-list__item-title {
+  @include title;
+}
+
+.reasons-list__item-paragraph {
+  @include paragraph;
+}
+
+.reasons-list__item-image {
+  background-color: $skyblue;
 }

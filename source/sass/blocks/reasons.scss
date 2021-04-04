@@ -1,9 +1,8 @@
-.reasons {
-  &__title {
-    @include title;
-  }
-
-  &__intro {
-    @include text;
-  }
+.reasons__title {
+  @include title;
 }
+
+.reasons__intro {
+  @include text;
+}
+
