@@ -1,7 +1,10 @@
 .footer {
-  outline: 2px solid blue;
+  &__container {
+    @include container;
+  }
 
   &__hashtag {
+    @include button-link;
     background-color: transparent;
     color: $black;
   }

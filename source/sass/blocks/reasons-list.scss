@@ -1,5 +1,4 @@
 .reasons-list {
-
   list-style: none;
   background-color: $skyblue;
   color: $white;
@@ -7,5 +6,18 @@
   &__item {
     @include text;
     text-transform: uppercase;
+  }
+
+  &__item-title {
+    @include title;
+  }
+
+  &__item--uncolored {
+    background-color: $shadow-grey;
+    color: $black;
+  }
+
+  &__item-paragraph {
+    @include paragraph;
   }
 }

@@ -1,8 +1,9 @@
 //global's styles
-@import "variables.scss";
-@import "fonts.scss";
-@import "mixins.scss";
-@import "global.scss";
+@import "global/normalize.scss";
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/mixins.scss";
+@import "global/global-styles.scss";
 
 //block's styles
 @import "blocks/header.scss";
