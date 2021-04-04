@@ -1,41 +1,43 @@
-.review-form {
-  &__fieldset {
-    border: none;
+.review-form__fieldset {
+  border: none;
+}
+
+.review-form__legend {
+  @include title;
+}
+
+.review-form__name-list,
+.review-form__contacts-list,
+.review-form__impression-list,
+.review-form__visited-list {
+  list-style: none;
+}
+
+.review-form__name-item,
+.review-form__contacts-item {
+  label {
+    @include text;
   }
 
-  &__legend {
+  input {
     @include title;
+    text-transform: none;
   }
+}
 
-  &__name-list,
-  &__contacts-list,
-  &__impression-list,
-  &__visited-list {
-    list-style: none;
+.review-form__phone::placeholder,
+.review-form__email::placeholder {
+  color: $black;
+}
+
+.review-form__impression-item,
+.review-form__visited-item {
+  label {
+    @include title;
+    text-transform: none;
   }
+}
 
-  &__name-item,
-  &__contacts-item {
-    label {
-      @include text;
-    }
-
-    input {
-      @include title;
-      text-transform: none;
-    }
-  }
-
-  &__phone::placeholder,
-  &__email::placeholder {
-    color: $black;
-  }
-
-  &__impression-item,
-  &__visited-item {
-    label {
-      @include title;
-      text-transform: none;
-    }
-  }
+.review-form__button {
+  @include button-link;
 }

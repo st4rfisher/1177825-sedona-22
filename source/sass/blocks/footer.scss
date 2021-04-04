@@ -1,12 +1,13 @@
-.footer {
-  outline: 2px solid blue;
+.footer__container {
+  @include container;
+}
 
-  &__hashtag {
-    background-color: transparent;
-    color: $black;
-  }
+.footer__hashtag {
+  @include button-link;
+  background-color: transparent;
+  color: $black;
+}
 
-  &__developer {
-    @include text;
-  }
+.footer__developer {
+  @include text;
 }

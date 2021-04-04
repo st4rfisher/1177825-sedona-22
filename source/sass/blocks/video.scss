@@ -1,0 +1,7 @@
+.video__title {
+  @include title;
+}
+
+.video__intro {
+  @include paragraph;
+}

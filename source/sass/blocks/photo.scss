@@ -1,5 +1,6 @@
 .photo {
   &__title {
+    @include paragraph;
     font-weight: bold;
   }
 
