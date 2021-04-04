@@ -1,4 +1,4 @@
-.hotel__title  {
+.hotel__title {
   @include title;
   font-size: 21px;
 }
@@ -10,4 +10,3 @@
 .hotel__search-link {
   @include button-link;
 }
-
