@@ -1,18 +1,20 @@
-//global's styles
+//global styles
 @import "global/normalize.scss";
 @import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/mixins.scss";
 @import "global/global-styles.scss";
 
-//block's styles
+//common styles
 @import "blocks/header.scss";
 @import "blocks/menu.scss";
 @import "blocks/main.scss";
 @import "blocks/welcome.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
+
+//index.html styles
 @import "blocks/reasons.scss";
 @import "blocks/reasons-list.scss";
 @import "blocks/opportunities-list.scss";
 @import "blocks/hotel.scss";
-@import "blocks/footer.scss";
-@import "blocks/social.scss";
