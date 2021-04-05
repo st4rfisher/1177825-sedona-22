@@ -3,6 +3,15 @@
   list-style: none;
   text-transform: uppercase;
   font-weight: bold;
+  outline: 2px solid red;
+}
+
+.menu {
+  display: flex;
+  text-decoration: none;
+  color: $black;
+  margin: 0;
+  padding: 0;
 }
 
 .menu a {

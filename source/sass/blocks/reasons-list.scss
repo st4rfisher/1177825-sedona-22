@@ -2,6 +2,12 @@
   list-style: none;
   background-color: $skyblue;
   color: $white;
+
+  @media all and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 586px 256px 1fr 1fr;
+  }
 }
 
 .reasons-list__item {
@@ -14,6 +20,18 @@
   }
 }
 
+.reasons-list__item:nth-of-type(1) {
+  @media all and (min-width: $desktop) {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.reasons-list__item:nth-of-type(2) {
+  grid-column: 1 / 4;
+}
+
 .reasons-list__item-title {
   @include title;
 }
@@ -24,4 +42,10 @@
 
 .reasons-list__item-image {
   background-color: $skyblue;
+}
+
+.reasons-list__item-block {
+  &--first {
+    display: flex;
+  }
 }

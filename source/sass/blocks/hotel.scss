@@ -1,3 +1,9 @@
+.hotel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .hotel__title {
   @include title;
   font-size: 21px;

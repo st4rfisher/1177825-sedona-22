@@ -1,7 +1,16 @@
 .opportunities-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   list-style: none;
   background-color: $white;
   color: $black;
+  padding: 0;
+  margin: 0;
+
+  @media all and (min-width: $desktop) {
+    flex-direction: row;
+  }
 }
 
 .opportunities-list__item-title {
