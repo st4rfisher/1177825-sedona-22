@@ -4,6 +4,11 @@
   flex-wrap: wrap;
 }
 
+.hotel__intro {
+  margin: 0 auto;
+  max-width: 458px;
+}
+
 .hotel__title {
   @include title;
   font-size: 21px;
@@ -15,4 +20,5 @@
 
 .hotel__search-link {
   @include button-link;
+  width: 100%;
 }

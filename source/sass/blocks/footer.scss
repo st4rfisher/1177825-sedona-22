@@ -1,6 +1,11 @@
 .footer__container {
   @include container;
   display: flex;
+  min-height: 120px;
+
+  @media all and (max-width: $mobile) {
+    min-height: 233px;
+  }
 }
 
 .footer__hashtag {
