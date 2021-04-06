@@ -1,0 +1,36 @@
+.review-form fieldset {
+  border: none;
+}
+
+.review-form legend {
+  @include title;
+}
+
+.review-form ul {
+  list-style: none;
+}
+
+.review-form label {
+  @include text;
+}
+
+.review-form__input {
+  @include title;
+  text-transform: none;
+
+  &::placeholder {
+    color: $black;
+  }
+}
+
+.review-form__impression-list,
+.review-form__visited-list {
+  label {
+    @include title;
+    text-transform: none;
+  }
+}
+
+.review-form__button {
+  @include button-link;
+}
