@@ -1,37 +1,30 @@
-.review-form__fieldset {
+.review-form fieldset {
   border: none;
 }
 
-.review-form__legend {
+.review-form legend {
   @include title;
 }
 
-.review-form__name-list,
-.review-form__contacts-list,
-.review-form__impression-list,
-.review-form__visited-list {
+.review-form ul {
   list-style: none;
 }
 
-.review-form__name-item,
-.review-form__contacts-item {
-  label {
-    @include text;
-  }
+.review-form label {
+  @include text;
+}
 
-  input {
-    @include title;
-    text-transform: none;
+.review-form__input {
+  @include title;
+  text-transform: none;
+
+  &::placeholder {
+    color: $black;
   }
 }
 
-.review-form__phone::placeholder,
-.review-form__email::placeholder {
-  color: $black;
-}
-
-.review-form__impression-item,
-.review-form__visited-item {
+.review-form__impression-list,
+.review-form__visited-list {
   label {
     @include title;
     text-transform: none;

@@ -43,15 +43,15 @@
               <ul class="review-form__name-list">
                 <li class="review-form__name-item">
                   <label for="name">Имя*:</label>
-                  <input type="text" name="name" id="name">
+                  <input class="review-form__input" type="text" name="name" id="name">
                 </li>
                 <li class="review-form__name-item">
                   <label for="surname">Фамилия*:</label>
-                  <input class="review-form__surname" type="text" name="surname" id="surname">
+                  <input class="review-form__input" type="text" name="surname" id="surname">
                 </li>
                 <li class="review-form__name-item">
                   <label for="patronymic">Отчество:</label>
-                  <input class="review-form__patronymic" type="text" name="patronymic" id="patronymic">
+                  <input class="review-form__input" type="text" name="patronymic" id="patronymic">
                 </li>
               </ul>
             </fieldset>
@@ -61,12 +61,12 @@
               <ul class="review-form__contacts-list">
                 <li class="review-form__contacts-item">
                   <label for="phone">Контактный телефон*:</label>
-                  <input class="review-form__phone" type="tel" name="phone" id="phone" placeholder="Введите телефон">
+                  <input class="review-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон">
                   <img src="img/icons/phone-icon.svg" alt="">
                 </li>
                 <li class="review-form__contacts-item">
                   <label for="email">Электронная почта*:</label>
-                  <input class="review-form__email" type="email" name="email" id="email" placeholder="Введите e-mail">
+                  <input class="review-form__input" name="email" id="email" placeholder="Введите e-mail">
                   <img src="img/icons/email-icon.svg" alt="">
                 </li>
               </ul>
@@ -76,15 +76,15 @@
               <legend class="review-form__legend">Ваше общее впечатление:</legend>
               <ul class="review-form__impression-list">
                 <li class="review-form__impression-item">
-                  <label for="positive">Скорее положительное</label>
+                  <label class="review-form__label" for="positive">Скорее положительное</label>
                   <input class="review-form__radio visually-hidden" type="radio" name="positive" id="positive" checked>
                 </li>
                 <li class="review-form__impression-item">
-                  <label for="negative">Скорее отрицательное</label>
+                  <label class="review-form__label" for="negative">Скорее отрицательное</label>
                   <input class="review-form__radio visually-hidden" type="radio" name="negative" id="negative">
                 </li>
                 <li class="review-form__impression-item">
-                  <label for="hard-to-answer">Затрудняюсь ответить</label>
+                  <label class="review-form__label" for="hard-to-answer">Затрудняюсь ответить</label>
                   <input class="review-form__radio visually-hidden" type="radio" name="hard-to-answer" id="hard-to-answer">
                 </li>
               </ul>
@@ -115,7 +115,7 @@
             <fieldset class="review-form__fieldset">
               <legend class="review-form__legend">Опишите свои эмоции:</legend>
               <label for="textarea" class="visually-hidden">Поле для описания</label>
-              <textarea class="review-form__textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="Опишите подробно все свои восторги ">
+              <textarea class="review-form__textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="Опишите подробно все свои восторги">
               </textarea>
             </fieldset>
 
