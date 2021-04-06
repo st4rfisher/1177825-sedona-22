@@ -1,0 +1,7 @@
+.media-content__title {
+  @include title;
+}
+
+.media-content__intro {
+  @include paragraph;
+}

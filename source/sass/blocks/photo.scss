@@ -1,0 +1,14 @@
+.photo__title {
+  @include paragraph;
+  font-weight: bold;
+}
+
+.photo__author {
+  @include paragraph;
+  text-transform: none;
+}
+
+.photo__likes-counter {
+  @include paragraph;
+  font-weight: bold;
+}
