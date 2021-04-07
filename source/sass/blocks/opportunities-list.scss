@@ -13,6 +13,11 @@
   }
 }
 
+.opportunities-list__item {
+  @include title;
+  max-width: 400px;
+}
+
 .opportunities-list__item-title {
   @include title;
 }

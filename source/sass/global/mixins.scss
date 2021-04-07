@@ -4,16 +4,11 @@
 
   @media all and (max-width: $mobile) {
     min-width: 320px;
-    background-color:chartreuse;
   }
 
-  @media all and (min-width: $tablet) {
-    background-color: cadetblue;
-  }
 
   @media all and (min-width: $desktop) {
-    max-width: 1280px;
-    background-color: brown;
+    max-width: $desktop;
   }
 }
 
