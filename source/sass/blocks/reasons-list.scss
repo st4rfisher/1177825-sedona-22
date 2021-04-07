@@ -65,9 +65,13 @@
 .reasons-list__item-image {
   background-color: $skyblue;
   flex-grow: 1;
-  max-height: 256px;
   max-width: 800px;
+  min-width: 520px;
   object-fit: cover;
+
+  @media all and (max-width: $mobile) {
+    object-fit: contain;
+  }
 }
 
 .reasons-list__item-info {

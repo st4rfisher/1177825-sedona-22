@@ -1,10 +1,6 @@
 .reasons {
   display: flex;
   flex-direction: column;
-
-  @media all and (max-width: $mobile) {
-    width: 320px;
-  }
 }
 
 .reasons__title {
