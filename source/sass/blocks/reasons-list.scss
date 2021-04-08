@@ -21,8 +21,6 @@
   box-sizing: border-box;
 
   &--uncolored {
-    display: flex;
-    flex-direction: column;
     background-color: $shadow-grey;
     color: $black;
     box-sizing: border-box;
@@ -51,6 +49,10 @@
 }
 
 .reasons-list__item-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media all and (min-width: $tablet) {
     display: flex;
     flex-direction: column;

@@ -3,12 +3,18 @@
 }
 
 .header__container {
+  position: relative;
   @include container;
   display: flex;
   height: 56px;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .header__logo {
+  position: absolute;
   z-index: 2;
+  left: 50%;
+  transform: translate(-50%);
 }
 

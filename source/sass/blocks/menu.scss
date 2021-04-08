@@ -1,16 +1,34 @@
 .menu {
   @include text;
   display: flex;
+  justify-content: space-between;
+  //column-gap: 130px;
   list-style: none;
   text-transform: uppercase;
   font-weight: bold;
-  outline: 2px solid red;
   color: $black;
   margin: 0;
-  padding: 0;
+  padding: 0 50px 0 70px;
+  width: 100%;
 
-  @media all and (max-width: $mobile) {
-    display: none;
+  // @media all and (max-width: $desktop) {
+  //   padding: 0;
+  // }
+}
+
+.menu__item:nth-child(2) {
+  @media all and (min-width: $tablet) {
+    margin-left: 23px;
+  }
+
+  @media all and (max-width: $tablet) {
+    margin: 0;
+  }
+}
+
+.menu__item:nth-child(3) {
+  @media all and (min-width: 700px) {
+    margin-left: 245px;
   }
 }
 

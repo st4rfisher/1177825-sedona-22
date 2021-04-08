@@ -1,13 +1,17 @@
 .navigation {
   display: flex;
+  position: relative;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .navigation__toggle {
   display: none;
 
-  @media all and (max-width: $mobile) {
+  @media all and (max-width: $tablet) {
     display: block;
+    position: absolute;
+    right: 0;
   }
 }

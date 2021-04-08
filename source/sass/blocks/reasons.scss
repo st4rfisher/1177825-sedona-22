@@ -1,16 +1,19 @@
 .reasons {
   display: flex;
   flex-direction: column;
+   
 }
 
 .reasons__title {
   @include title;
   box-sizing: border-box;
   padding: 0 20px;
+  text-align: center
 }
 
 .reasons__intro {
   @include text;
   box-sizing: border-box;
   padding: 0 20px;
+  text-align: center
 }
