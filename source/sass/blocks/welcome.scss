@@ -3,9 +3,10 @@
   background-image: url("../img/welcome-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+
   @media all and (max-width: $mobile) {
-    min-height: 389px;
+    min-height: 158px;
+    background-position: 60% 50%;
   }
 
   @media all and (min-width: $tablet) {
@@ -14,7 +15,11 @@
 }
 
 .welcome__text {
-  min-width: 280px;
+  min-width: 229px;
   max-width: 460px;
   object-fit: contain;
+
+  @media all and (max-width: $mobile) {
+    width: 229px ;
+  }
 }
