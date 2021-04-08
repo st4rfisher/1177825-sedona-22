@@ -6,6 +6,7 @@
   color: $white;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 
   @media all and (min-width: $tablet) {
     display: grid;
@@ -17,12 +18,15 @@
 .reasons-list__item {
   @include text;
   text-transform: uppercase;
+  box-sizing: border-box;
 
   &--uncolored {
     display: flex;
     flex-direction: column;
     background-color: $shadow-grey;
     color: $black;
+    box-sizing: border-box;
+    padding: 0 20px;
   }
 }
 
@@ -59,21 +63,34 @@
 
 .reasons-list__item-paragraph {
   @include paragraph;
+  text-align: center;
 }
 
 .reasons-list__item-image {
+  display: block;
   background-color: $skyblue;
   flex-grow: 1;
   max-width: 800px;
   min-width: 520px;
   object-fit: cover;
+  margin: 0;
 
   @media all and (max-width: $mobile) {
     object-fit: contain;
   }
+
+  @media all and (min-width: $mobile) {
+    width: 100%;
+  }
 }
 
 .reasons-list__item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+
   @media all and (min-width: $tablet) {
     max-width: 400px;
   }

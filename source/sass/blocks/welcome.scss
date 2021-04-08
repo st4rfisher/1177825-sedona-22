@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
   @media all and (max-width: $mobile) {
     min-height: 389px;
   }

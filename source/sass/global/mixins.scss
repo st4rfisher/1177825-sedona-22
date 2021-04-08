@@ -1,8 +1,8 @@
 @mixin container {
   outline: 2px solid green;
   margin: 0 auto;
-  overflow: hidden;
-  
+
+
   @media all and (max-width: $mobile) {
     min-width: 320px;
   }

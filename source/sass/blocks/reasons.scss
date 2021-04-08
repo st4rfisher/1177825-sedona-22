@@ -5,8 +5,12 @@
 
 .reasons__title {
   @include title;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .reasons__intro {
   @include text;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
