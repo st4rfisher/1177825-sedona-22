@@ -9,7 +9,7 @@
 .navigation__toggle {
   display: none;
 
-  @media all and (max-width: $tablet) {
+  @media all and (max-width: 700px) {
     display: block;
     position: absolute;
     right: 0;

@@ -2,7 +2,6 @@
   @include text;
   display: flex;
   justify-content: space-between;
-  //column-gap: 130px;
   list-style: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -11,14 +10,22 @@
   padding: 0 50px 0 70px;
   width: 100%;
 
-  // @media all and (max-width: $desktop) {
-  //   padding: 0;
-  // }
+  @media all and (max-width: $desktop) {
+    padding: 0;
+  }
+
+  @media all and (max-width: 700px) {
+    display: none;
+  }
 }
 
 .menu__item:nth-child(2) {
   @media all and (min-width: $tablet) {
     margin-left: 23px;
+  }
+
+  @media all and (max-width: $tablet) {
+    margin-left: 0;
   }
 
   @media all and (max-width: $tablet) {

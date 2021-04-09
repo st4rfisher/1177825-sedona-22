@@ -1,4 +1,7 @@
 .welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $white;
   background-image: url("../img/welcome-background.jpg");
   background-repeat: no-repeat;
@@ -6,17 +9,14 @@
   background-size: 100%;
   box-sizing: border-box;
   padding: 0 20px;
-  @media all and (max-width: $mobile) {
-    min-height: 389px;
-  }
-
-  @media all and (min-width: $tablet) {
-    min-height: 518px;
-  }
 }
 
-.welcome__text {
-  min-width: 280px;
-  max-width: 460px;
-  object-fit: contain;
+.welcome__text-image {
+  @media all and (max-width: $mobile) {
+    width: 282px;
+  }
+
+  @media all and (min-width: $mobile) {
+    width: 461px;
+  }
 }
