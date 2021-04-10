@@ -8,7 +8,7 @@
   margin: 0;
   overflow: hidden;
 
-  @media all and (min-width: $tablet) {
+  @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content;
@@ -22,7 +22,7 @@
 
   &--first,
   &--second {
-    @media all and (min-width: $tablet) {
+    @media (min-width: $tablet) {
       grid-column: 1 / 4;
 
       .reasons-list__item-block {
@@ -43,7 +43,7 @@
   flex-direction: column;
   align-items: center;
 
-  @media all and (min-width: $tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
   }
@@ -64,16 +64,8 @@
   flex-grow: 1;
   max-width: 800px;
   min-width: 520px;
-  object-fit: cover;
   margin: 0;
-
-  @media all and (max-width: $mobile) {
-    object-fit: contain;
-  }
-
-  @media all and (min-width: $mobile) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .reasons-list__item-info {
@@ -83,7 +75,7 @@
   box-sizing: border-box;
   padding: 0 20px;
 
-  @media all and (min-width: $tablet) {
+  @media (min-width: $tablet) {
     max-width: 400px;
   }
 }
