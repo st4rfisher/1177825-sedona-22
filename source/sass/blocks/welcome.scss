@@ -12,11 +12,9 @@
 }
 
 .welcome__text-image {
-  @media (max-width: $mobile) {
-    width: 282px;
-  }
+  width: 282px;
 
-  @media (min-width: $mobile) {
-    width: 461px;
+  @media (min-width: $tablet) {
+    width: 460px;
   }
 }
