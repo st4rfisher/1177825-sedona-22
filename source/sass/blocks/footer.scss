@@ -27,9 +27,7 @@
 }
 
 .footer__developer {
+  @include text;
   display: flex;
   column-gap: 13px;
-  @include text;
 }
-
-
