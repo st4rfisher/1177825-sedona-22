@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,14 +14,12 @@
         </a>
 
         <nav class="navigation">
-          <div class="navigation__wrapper">
-            <ul class="menu">
-              <li class="menu__item"><a href="index.html">Главная</a></li>
-              <li class="menu__item"><a href="catalog.html">Фото и видео</a></li>
-              <li class="menu__item"><a href="review.html">Форма отзыва</a></li>
-              <li class="menu__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-            </ul>
-          </div>
+          <ul class="menu">
+            <li class="menu__item"><a href="index.html">Главная</a></li>
+            <li class="menu__item"><a href="catalog.html">Фото и видео</a></li>
+            <li class="menu__item"><a href="review.html">Форма отзыва</a></li>
+            <li class="menu__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          </ul>
           <button class="navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -31,20 +30,23 @@
       <div class="main__container">
         <section class="welcome">
           <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
-          <img class="welcome__text" src="img/welcome-text.svg" alt="Welcome text">
+          <img class="welcome__text-image" src="img/welcome-text-image.svg" alt="Welcome text">
         </section>
         <section class="reasons">
           <h2 class="visually-hidden">5 причин, по которым Седона круче, чем Гранд Каньон</h2>
           <p class="reasons__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
           <span class="reasons__intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span>
           <ul class="reasons-list">
-            <li class="reasons-list__item">
+            <li class="reasons-list__item reasons-list__item--first">
               <div class="reasons-list__item-block">
-                <h3 class="reasons-list__item-title">Настоящий городок</h3>
-                <span class="reasons-list__number">№1</span>
-                <p class="reasons-list__item-paragraph">Cедона не аттракцион для туристов, там течет своя жизнь</p>
+                <div class="reasons-list__item-info">
+                  <h3 class="reasons-list__item-title">Настоящий городок</h3>
+                  <p class="reasons-list__number">№1</p>
+                  <p class="reasons-list__item-paragraph">Cедона не аттракцион для туристов, там течет своя жизнь</p>
+                </div>
+                <img class="reasons-list__item-image" src="img/photo-city.jpg" alt="Фото здания в городе">
               </div>
-              <img class="reasons-list__item-image" src="img/photo-city.jpg" alt="Фото здания в городе">
+
               <ul class="opportunities-list">
                 <li class="opportunities-list__item">
                   <img src="img/icons/house-icon.svg" alt="">
@@ -64,19 +66,21 @@
               </ul>
             </li>
 
-            <li class="reasons-list__item">
+            <li class="reasons-list__item reasons-list__item--second">
               <div class="reasons-list__item-block">
-                <h3 class="reasons-list__item-title">Tам есть Мост Дьявола</h3>
-                <span class="reasons-list__number">№2</span>
-                <p class="reasons-list__item-paragraph">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                <img class="reasons-list__item-image" src="img/photo-devils-bridge.jpg" alt="Фото Моста Дьявола">
+                <div class="reasons-list__item-info">
+                  <h3 class="reasons-list__item-title">Tам есть Мост Дьявола</h3>
+                  <p class="reasons-list__number">№2</p>
+                  <p class="reasons-list__item-paragraph">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                </div>
               </div>
-              <img class="reasons-list__item-image" src="img/photo-devils-bridge.jpg" alt="Фото Моста Дьявола">
             </li>
 
             <li class="reasons-list__item reasons-list__item--uncolored">
               <div class="reasons-list__item-block">
                 <h3 class="reasons-list__item-title">Небольшая площадь</h3>
-                <span class="reasons-list__number">№3</span>
+                <p class="reasons-list__number">№3</p>
                 <p class="reasons-list__item-paragraph">Все интересные места находятся очень близко</p>
               </div>
             </li>
@@ -84,7 +88,7 @@
             <li class="reasons-list__item reasons-list__item--uncolored">
               <div class="reasons-list__item-block">
                 <h3 class="reasons-list__item-title">Красивая дорога</h3>
-                <span class="reasons-list__number">№4</span>
+                <p class="reasons-list__number">№4</p>
                 <p class="reasons-list__item-paragraph">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
@@ -92,7 +96,7 @@
             <li class="reasons-list__item reasons-list__item--uncolored">
               <div class="reasons-list__item-block">
                 <h3 class="reasons-list__item-title">Мало туристов</h3>
-                <span class="reasons-list__number">№5</span>
+                <p class="reasons-list__number">№5</p>
                 <p class="reasons-list__item-paragraph">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
@@ -100,13 +104,18 @@
         </section>
         <section class="hotel">
           <h2 class="visually-hidden">Поиск гостиницы</h2>
-          <p class="hotel__title">Заинтересовались?</p>
-          <p class="hotel__paragraph">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
-          <a class="hotel__search-link" href="#">Найти гостиницу</a>
+          <div class="hotel__intro">
+            <p class="hotel__title">Заинтересовались?</p>
+            <p class="hotel__paragraph">
+              <span>Укажите предполагаемые даты поездки,</span>
+              <span>и мы покажем вам лучшие предложения гостиниц в Cедоне</span>
+            </p>
+            <a class="hotel__search-link" href="#">Найти гостиницу</a>
+          </div>
         </section>
         <section class="location">
           <h2 class="visually-hidden">Расположение</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3402997.7494883514!2d-111.7894842!3d33.5990771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1617436666513!5m2!1sru!2sru" width="600" height="450"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3402997.7494883514!2d-111.7894842!3d33.5990771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1617436666513!5m2!1sru!2sru" width="100%" height="350" frameborder="0"></iframe>
         </section>
       </div>
     </main>

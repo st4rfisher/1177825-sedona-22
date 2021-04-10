@@ -1,5 +1,7 @@
 @mixin container {
-  outline: 5px solid green;
+  margin: 0 auto;
+  min-width: $mobile;
+  max-width: $desktop;
 }
 
 @mixin text {
@@ -45,4 +47,5 @@
   color: $white;
   background-color: $skyblue;
   border: none;
+  text-align: center;
 }

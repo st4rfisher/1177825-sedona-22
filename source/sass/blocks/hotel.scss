@@ -1,3 +1,19 @@
+.hotel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.hotel__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 458px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
 .hotel__title {
   @include title;
   font-size: 21px;
@@ -5,8 +21,10 @@
 
 .hotel__paragraph {
   @include paragraph;
+  text-align: center;
 }
 
 .hotel__search-link {
   @include button-link;
+  width: 100%;
 }

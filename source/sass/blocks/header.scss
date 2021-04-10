@@ -1,8 +1,24 @@
-.header {
-  background-color: $white;
-  outline: 2px solid #a52a2a;
-}
-
 .header__container {
   @include container;
+  display: flex;
+  position: relative;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: $white;
+
+  @media (min-width: $tablet) {
+    padding: 0 27px 0 48px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 71px 0 90px;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%);
 }

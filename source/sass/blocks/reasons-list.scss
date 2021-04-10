@@ -1,16 +1,51 @@
 .reasons-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   background-color: $skyblue;
   color: $white;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content min-content;
+  }
 }
 
 .reasons-list__item {
   @include text;
   text-transform: uppercase;
+  box-sizing: border-box;
+
+  &--first,
+  &--second {
+    @media (min-width: $tablet) {
+      grid-column: 1 / 4;
+
+      .reasons-list__item-block {
+        flex-direction: row;
+      }
+    }
+  }
 
   &--uncolored {
     background-color: $shadow-grey;
     color: $black;
+    padding: 0 20px;
+  }
+}
+
+.reasons-list__item-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -20,8 +55,27 @@
 
 .reasons-list__item-paragraph {
   @include paragraph;
+  text-align: center;
 }
 
 .reasons-list__item-image {
+  display: block;
   background-color: $skyblue;
+  flex-grow: 1;
+  max-width: 800px;
+  min-width: 520px;
+  margin: 0;
+  width: 100%;
+}
+
+.reasons-list__item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    max-width: 400px;
+  }
 }
