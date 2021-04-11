@@ -1,7 +1,35 @@
+.review {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 120px;
+  }
+}
+
 .review__title {
   @include title;
+  text-align: center;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 3;
+  }
 }
 
 .review__intro {
   @include paragraph;
+  text-align: center;
+  border-bottom: 1px solid $smoky-white;
+  margin: 0;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 3;
+    border-bottom: none;
+  }
 }

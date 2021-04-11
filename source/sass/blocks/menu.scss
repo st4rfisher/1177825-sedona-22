@@ -9,7 +9,7 @@
   padding: 0;
   width: 100%;
 
-  @media (min-width: 700px) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
   }
@@ -22,7 +22,7 @@
 }
 
 .menu__item:nth-child(3) {
-  @media (min-width: 700px) {
+  @media (min-width: $tablet) {
     margin-left: 245px;
   }
 }

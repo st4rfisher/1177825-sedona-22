@@ -12,6 +12,11 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 120px;
   }
 }
 
@@ -23,4 +28,6 @@
 
 .footer__developer {
   @include text;
+  display: flex;
+  column-gap: 13px;
 }
