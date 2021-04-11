@@ -1,7 +1,4 @@
 .review {
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr;

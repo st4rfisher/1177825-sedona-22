@@ -21,7 +21,7 @@
   }
 }
 
-.review-form__fieldset--first {
+.review-form__fieldset--name {
   padding-bottom: 15px;
 
   @media (min-width: $tablet) {
@@ -29,14 +29,10 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     padding: 0 0 0 58px;
-
-    .review-form__legend {
-      text-align: left;
-    }
   }
 }
 
-.review-form__fieldset--second {
+.review-form__fieldset--contacts {
   padding-bottom: 28px;
 
   @media (min-width: $tablet) {
@@ -46,7 +42,7 @@
   }
 }
 
-.review-form__fieldset--third {
+.review-form__fieldset--impression {
   padding-bottom: 31px;
 
   @media (min-width: $tablet) {
@@ -54,14 +50,19 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     padding-bottom: 0;
+  }
+}
 
-    .review-form__legend {
+.review-form__legend {
+  @media (min-width: $tablet) {
+    .review-form__fieldset--name &,
+    .review-form__fieldset--impression & {
       text-align: left;
     }
   }
 }
 
-.review-form__fieldset--fourth {
+.review-form__fieldset--visited {
   padding-bottom: 30px;
   margin-top: 15px;
 
@@ -69,15 +70,12 @@
     order: 4;
     grid-column: 1 / 3;
     margin-top: 52px;
-
-    legend {
-      display: flex;
-      flex-direction: column;
-    }
   }
 }
 
-.review-form__fieldset--fifth {
+.review-form__fieldset--textarea {
+  border: none;
+
   @media (min-width: $tablet) {
     order: 5;
     grid-column: 1 / 3;
@@ -87,17 +85,6 @@
 .review-form legend {
   @include title;
   text-align: center;
-}
-
-.review-form__name-list,
-.review-form__contacts-list,
-.review-form__impression-list,
-.review-form__visited-list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .review-form label {
@@ -113,29 +100,39 @@
   }
 }
 
+.review-form__name-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
 .review-form__name-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 10px 0 10px 0;
+}
 
-  label {
-    margin-right: 13px;
-  }
+.review-form__name-item label {
+  margin-right: 13px;
+}
 
-  input {
-    width: 100%;
-    background-color: $light-grey;
-    border: none;
-    box-sizing: border-box;
-    padding: 18px 32px 14px 22px;
-  }
+.review-form__name-item input {
+  width: 100%;
+  background-color: $light-grey;
+  border: none;
+  box-sizing: border-box;
+  padding: 18px 32px 14px 22px;
 }
 
 .review-form__contacts-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
   @media (min-width: $desktop) {
     flex-direction: row;
@@ -149,28 +146,28 @@
   grid-template-rows: min-content min-content;
   margin-bottom: 14px;
 
-  label {
-    grid-column: 1 / 3;
-    margin-left: 22px;
-    white-space: nowrap;
-
-    @media (min-width: $desktop) {
-      margin: 0;
-    }
-  }
-
-  input {
-    width: 100%;
-    background-color: $light-grey;
-    border: none;
-    box-sizing: border-box;
-    padding: 18px 32px 14px 22px;
-  }
-
   @media (min-width: $desktop) {
     display: flex;
     align-items: center;
   }
+}
+
+.review-form__contacts-item label {
+  grid-column: 1 / 3;
+  margin-left: 22px;
+  white-space: nowrap;
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.review-form__contacts-item input {
+  width: 100%;
+  background-color: $light-grey;
+  border: none;
+  box-sizing: border-box;
+  padding: 18px 32px 14px 22px;
 }
 
 .review-form__contacts-span {
@@ -179,27 +176,26 @@
   }
 }
 
-
-.review-form__impression-list,
-.review-form__visited-list {
-  label {
-    @include title;
-    text-transform: none;
-  }
+.review-form__impression-list label,
+.review-form__visited-list label {
+  @include title;
+  text-transform: none;
 }
 
 .review-form__impression-list {
   display: flex;
   flex-direction: column;
+  list-style: none;
   align-items: flex-start;
   justify-content: center;
   row-gap: 43px;
   width: 100%;
   height: 100%;
-  margin-top: 25px;
+  margin: 25px 0 0 0;
+  padding: 0;
 
   @media (min-width: $tablet) {
-    margin-top: 0;
+    margin: 0;
   }
 }
 
@@ -208,8 +204,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   white-space: nowrap;
+  list-style: none;
   row-gap: 54px;
   margin-top: 25px;
+  padding: 0;
 
   @media (min-width: $tablet) {
     display: grid;
@@ -227,6 +225,7 @@
 .review-form__impression-item,
 .review-form__visited-item {
   padding-left: 78px;
+  margin: 0 auto;
 }
 
 .review-form__textarea {
@@ -239,12 +238,13 @@
 
 .review-form__button {
   @include button-link;
-  width: 100%;
   box-sizing: border-box;
   padding: 20px 33px 15px 32px;
+  margin: 0 20px;
 
   @media (min-width: $tablet) {
     order: 6;
+    margin: 0;
   }
 }
 
