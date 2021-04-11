@@ -1,7 +1,11 @@
 .media-content__title {
   @include title;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .media-content__intro {
   @include paragraph;
+  text-align: center;
+  padding: 0 20px;
 }

@@ -1,3 +1,45 @@
 .photos-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.photos-list__item {
+  min-height: 280px;
+  min-width: 280px;
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+
+  }
+}
+
+.photos-list__item--preview {
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 3;
+
+    flex-grow: 1;
+  }
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 4;
+  }
+
 }
