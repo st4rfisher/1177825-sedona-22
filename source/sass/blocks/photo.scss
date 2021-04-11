@@ -3,6 +3,7 @@
     position: relative;
   }
 }
+
 .photo__info {
   display: flex;
   flex-direction: column;
@@ -20,6 +21,8 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $white;
   }
 }
 
@@ -36,20 +39,11 @@
 
 .photo__image-link {
   display: block;
-  width: 100%;
-  height: 100%;
+
   img {
     display: block;
     width: 100%;
     height: 100%;
-
-    @media (min-width: $tablet) {
-
-    }
-
-    @media (min-width: $desktop) {
-
-    }
   }
 }
 
@@ -72,6 +66,14 @@
     grid-row: 1 / 3;
   }
 }
+
+.photo__like-icon path {
+  @media (min-width: $desktop) {
+    fill: $white;
+    opacity: 1;
+  }
+}
+
 
 .photo__likes-counter {
   @include paragraph;

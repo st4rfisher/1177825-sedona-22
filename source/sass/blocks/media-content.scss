@@ -1,11 +1,32 @@
 .media-content__title {
   @include title;
-  text-align: center;
   padding: 0 20px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 .media-content__intro {
   @include paragraph;
-  text-align: center;
   padding: 0 20px;
+  max-width: 458px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
+// width: 130px;
+//   text-align: center;
+//   margin: 0 auto;
