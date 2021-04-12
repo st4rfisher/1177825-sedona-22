@@ -1,7 +1,33 @@
 .video__title {
   @include title;
+  text-align: center;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 .video__intro {
   @include paragraph;
+  padding: 0 20px;
+  max-width: 445px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.video__video-content {
+  width: 100%;
 }
