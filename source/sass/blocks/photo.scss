@@ -7,19 +7,20 @@
 .photo__info {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     background-color: $light-grey;
-    box-sizing: border-box;
     padding: 20px 20px 15px 20px;
   }
 
   @media (min-width: $desktop) {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     color: $white;
@@ -39,12 +40,12 @@
 
 .photo__image-link {
   display: block;
+}
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
+.photo__image-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .photo__author {
@@ -73,7 +74,6 @@
     opacity: 1;
   }
 }
-
 
 .photo__likes-counter {
   @include paragraph;
