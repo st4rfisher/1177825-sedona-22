@@ -71,11 +71,17 @@
 
 .reasons-list__item-title {
   @include title;
+  margin: 15px 0 0 0;
 }
 
 .reasons-list__item-paragraph {
   @include paragraph;
   text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.reasons-list__number {
+  margin: 10px 0 0 0;
 }
 
 .reasons-list__item-image {
@@ -102,7 +108,8 @@
 
 .reasons-list__item-info {
   .reasons-list__item--first & {
-    padding-bottom: 39px;
+    padding: 0 14px 36px 14px;
+
   }
 }
 

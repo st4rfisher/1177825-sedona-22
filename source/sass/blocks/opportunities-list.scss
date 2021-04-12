@@ -22,10 +22,6 @@
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content;
 
-  img {
-    grid-row: 1 / 3;
-  }
-
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
@@ -41,13 +37,22 @@
   }
 }
 
+.opportunities-list__item img {
+  grid-row: 1 / 3;
+  width: 39px;
+  height: 37px;
+}
+
+
 .opportunities-list__item-title {
   @include title;
+  margin: 10px;
 }
 
 .opportunities-list__item-paragraph {
   @include paragraph;
   text-align: left;
+  margin: 0 0 0 11px;
 
   @media (min-width: $tablet) {
     text-align: center;
