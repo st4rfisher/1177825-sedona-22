@@ -1,12 +1,32 @@
 .reasons-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   list-style: none;
   background-color: $skyblue;
   color: $white;
-  padding: 0;
+  padding: 55px 0 0 0;
   margin: 0;
   overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-image: url("../img/reasons-decoration-before.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    width: 100%;
+  }
+
+  @media (min-width: $mobile) {
+    &::before {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet) {
     display: grid;
@@ -79,3 +99,10 @@
     max-width: 400px;
   }
 }
+
+.reasons-list__item-info {
+  .reasons-list__item--first & {
+    padding-bottom: 39px;
+  }
+}
+
