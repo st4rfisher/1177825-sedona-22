@@ -56,7 +56,11 @@
     row-gap: 10px;
     background-color: $shadow-grey;
     color: $black;
-    padding: 12px 35px 20px 35px
+    padding: 12px 35px 20px 35px;
+
+    @media (min-width: $tablet) {
+      padding: 43px 0 0 0;
+    }
   }
 }
 
@@ -71,7 +75,11 @@
   }
 
   .reasons-list__item--second & {
-    padding-top: 25px;
+    padding: 25px 0 0 0;
+    @media (min-width: $tablet) {
+      display: flex;
+      padding-top: 0;
+    }
   }
 }
 
@@ -79,10 +87,25 @@
   @include title;
   margin: 15px 0 0 0;
   text-align: center;
+
   @media (min-width: $tablet) {
     @include big-text;
     margin: 0;
     width: 192px;
+
+    .reasons-list__item--second &,
+    .reasons-list__item--uncolored & {
+      width: 150px;
+    }
+
+  }
+}
+
+.reasons-list__number {
+  margin: 10px 0 0 0;
+
+  @media (min-width: $tablet) {
+    margin: 0;
   }
 }
 
@@ -90,10 +113,13 @@
   @include paragraph;
   text-align: center;
   margin: 10px 0 0 0;
-}
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
 
-.reasons-list__number {
-  margin: 10px 0 0 0;
+  .reasons-list__item--uncolored & {
+    width: 200px;
+  }
 }
 
 .reasons-list__item-image {
@@ -101,9 +127,13 @@
   background-color: $skyblue;
   flex-grow: 1;
   max-width: 800px;
-  min-width: 512px;
+  min-width: 520px;
   margin: 0;
   width: 100%;
+
+  @media (min-width: $tablet) {
+    min-width: 512px;
+  }
 }
 
 .reasons-list__item-info {
@@ -118,17 +148,22 @@
   }
 
   .reasons-list__item--first & {
-    padding: 0 14px 34px 14px;
+    padding: 0 14px 36px 14px;
 
     @media (min-width: $tablet) {
-      padding: 0 14px 34px 14px;
-
-      gap: 20px;
+      padding: 34px 17px 34px 17px;
+      gap: 13px;
     }
   }
 
   .reasons-list__item--second & {
     padding-bottom: 31px;
+
+    @media (min-width: $tablet) {
+      order: 2;
+      padding: 40px 33px 34px 32px;
+      gap: 13px;
+    }
   }
 }
 
