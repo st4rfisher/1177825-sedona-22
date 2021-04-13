@@ -7,7 +7,8 @@
   color: $black;
   margin: 0;
   box-sizing: border-box;
-  padding: 26px 20px 35px 18px;
+  padding: 26px 21px 28px 18px;
+  row-gap: 16px;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -46,7 +47,7 @@
 
 .opportunities-list__item-title {
   @include title;
-  margin: 10px;
+  margin: 9px 10px 11px 12px;
 }
 
 .opportunities-list__item-paragraph {

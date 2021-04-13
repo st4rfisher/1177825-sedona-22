@@ -17,12 +17,20 @@
 
 .menu__item:nth-child(2) {
   @media (min-width: $tablet) {
+    margin-left: 26px;
+  }
+
+  @media (min-width: $desktop) {
     margin-left: 23px;
   }
 }
 
 .menu__item:nth-child(3) {
   @media (min-width: $tablet) {
+    margin-left: 160px;
+  }
+
+  @media (min-width: $desktop) {
     margin-left: 245px;
   }
 }

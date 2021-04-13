@@ -31,7 +31,7 @@
   text-transform: uppercase;
 }
 
-@mixin button-text {
+@mixin big-text {
   font-family: "PT Sans", "Arial", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -41,7 +41,7 @@
 }
 
 @mixin button-link {
-  @include button-text;
+  @include big-text;
   text-decoration: none;
   text-transform: uppercase;
   color: $white;
