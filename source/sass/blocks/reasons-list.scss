@@ -60,6 +60,8 @@
 
     @media (min-width: $tablet) {
       padding: 43px 0 0 0;
+      width: 256px;
+      height: 256px;
     }
   }
 }
@@ -76,6 +78,7 @@
 
   .reasons-list__item--second & {
     padding: 25px 0 0 0;
+    
     @media (min-width: $tablet) {
       display: flex;
       padding-top: 0;
@@ -89,7 +92,7 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    @include big-text;
+    @include medium-title;
     margin: 0;
     width: 192px;
 
@@ -97,7 +100,6 @@
     .reasons-list__item--uncolored & {
       width: 150px;
     }
-
   }
 }
 
@@ -105,7 +107,10 @@
   margin: 10px 0 0 0;
 
   @media (min-width: $tablet) {
-    margin: 0;
+    .reasons-list__item--first &,
+    .reasons-list__item--second & {
+      margin: 0;
+    }
   }
 }
 
@@ -113,12 +118,18 @@
   @include paragraph;
   text-align: center;
   margin: 10px 0 0 0;
-  @media (min-width: $tablet) {
-    margin: 0;
-  }
 
-  .reasons-list__item--uncolored & {
-    width: 200px;
+  @media (min-width: $tablet) {
+    .reasons-list__item--first &,
+    .reasons-list__item--second & {
+      margin: 0;
+    }
+
+    .reasons-list__item--uncolored & {
+      margin: 18px 0 0 0;
+      padding: 0 40px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -166,4 +177,3 @@
     }
   }
 }
-

@@ -16,7 +16,7 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    @include big-text;
+    @include medium-title;
     width: 520px;
     padding: 0;
     margin: 0;
@@ -34,4 +34,3 @@
     padding-bottom: 52px;
   }
 }
-

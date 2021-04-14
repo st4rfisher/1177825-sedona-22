@@ -22,6 +22,24 @@
   text-transform: uppercase;
 }
 
+@mixin medium-title {
+  font-family: "PT Sans", "Arial", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+@mixin big-title {
+  font-family: "PT Sans", "Arial", "Tahoma", sans-serif;;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
 @mixin paragraph {
   font-family: "PT Sans", "Arial", "Tahoma", sans-serif;
   font-style: normal;
@@ -31,17 +49,8 @@
   text-transform: uppercase;
 }
 
-@mixin big-text {
-  font-family: "PT Sans", "Arial", "Tahoma", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-  text-transform: uppercase;
-}
-
 @mixin button-link {
-  @include big-text;
+  @include big-title;
   text-decoration: none;
   text-transform: uppercase;
   color: $white;

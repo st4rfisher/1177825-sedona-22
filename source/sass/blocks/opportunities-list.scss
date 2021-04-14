@@ -68,7 +68,7 @@
   margin: 9px 10px 11px 12px;
 
   @media (min-width: $tablet) {
-    @include big-text;
+    @include medium-title;
     margin: 26px 10px 22px 12px;
   }
 }
