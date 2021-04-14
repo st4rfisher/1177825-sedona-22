@@ -17,6 +17,10 @@
     align-items: flex-start;
     padding: 60px 9px 58px 6px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 60px 9px 80px 6px;
+  }
 }
 
 .opportunities-list__item {
@@ -37,12 +41,17 @@
 
   @media (min-width: $desktop) {
     max-width: 386px;
+    padding: 0px 65px;
   }
 }
 
 .opportunities-list__item:nth-of-type(2) {
   @media (min-width: $tablet) {
     order: 3;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 45px;
   }
 }
 
