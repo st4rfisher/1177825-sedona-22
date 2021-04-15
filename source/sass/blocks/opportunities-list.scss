@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   list-style: none;
   background-color: $white;
   color: $black;
@@ -51,7 +52,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 0 45px;
+    padding: 0 85px;
   }
 }
 
@@ -78,14 +79,24 @@
 
   @media (min-width: $tablet) {
     @include medium-title;
-    margin: 26px 10px 22px 12px;
+    margin: 27px 10px 21px 13px;
   }
+
+
 }
 
 .opportunities-list__item-paragraph {
   @include paragraph;
   text-align: left;
   margin: 0 0 0 11px;
+
+  .opportunities-list__item:nth-of-type(2) & {
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
 
   @media (min-width: $tablet) {
     text-align: center;

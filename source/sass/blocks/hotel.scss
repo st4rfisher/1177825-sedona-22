@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 14px 0 0 0;
+  padding: 38px 0 0 0;
 
   @media (min-width: $tablet) {
+    padding: 14px 0 0 0;
     padding: 58px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 56px 0 66px 0;
   }
 }
 
@@ -38,9 +43,10 @@
 .hotel__paragraph {
   @include paragraph;
   text-align: center;
-  margin: 0;
+  margin: 20px 0 0 0;
 
   @media (min-width: $tablet) {
+    margin: 0;
     display: flex;
     flex-direction: column;
   }
@@ -48,13 +54,18 @@
 
 .hotel__search-link {
   @include button-link;
+  @include medium-title;
   width: 100%;
-  margin: 27px 20px 49px 20px;
+  margin: 28px 20px 49px 20px;
   padding: 15px 0 17px 0;
 
   @media (min-width: $tablet) {
     @include medium-title;
     padding: 15px 12px 17px 12px;
     margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 7px 0 0 0;
   }
 }

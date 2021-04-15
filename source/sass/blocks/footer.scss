@@ -23,12 +23,9 @@
 
 .footer__hashtag {
   @include button-link;
+  @include medium-title;
   background-color: transparent;
   color: $black;
-
-  @media (min-width: $tablet) {
-    @include medium-title;
-  }
 }
 
 .footer__developer {

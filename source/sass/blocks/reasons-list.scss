@@ -22,7 +22,7 @@
     width: 100%;
   }
 
-  @media (min-width: $mobile) {
+  @media (min-width: $tablet) {
     &::before {
       display: none;
     }
@@ -60,8 +60,11 @@
 
     @media (min-width: $tablet) {
       padding: 43px 0 0 0;
-      width: 256px;
       height: 256px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100%;
     }
   }
 }
@@ -136,17 +139,14 @@
 .reasons-list__item-image {
   display: block;
   background-color: $skyblue;
-  flex-grow: 1;
   min-width: 520px;
   max-width: 800px;
   margin: 0;
   width: 100%;
+  object-fit: cover;
 
   @media (min-width: $tablet) {
     min-width: 512px;
-  }
-
-  @media (min-width: $tablet) {
     height: 256px;
   }
 }
@@ -163,7 +163,7 @@
   }
 
   .reasons-list__item--first & {
-    padding: 0 14px 36px 14px;
+    padding: 0 14px 34px 14px;
 
     @media (min-width: $tablet) {
       padding: 34px 17px 34px 17px;
@@ -171,7 +171,7 @@
     }
 
     @media (min-width: $desktop) {
-      padding: 40px 85px 40px 85px;
+      padding: 35px 68px 40px 70px;
     }
   }
 
@@ -180,7 +180,13 @@
 
     @media (min-width: $tablet) {
       order: 2;
-      padding: 40px 33px 34px 32px;
+      padding: 40px 40px 37px 36px;
+      row-gap: 13px;
+    }
+
+    @media (min-width: $desktop) {
+      order: 2;
+      padding: 31px 93px 34px 91px;
       gap: 13px;
     }
   }
