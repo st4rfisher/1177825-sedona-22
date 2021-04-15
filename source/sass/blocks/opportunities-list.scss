@@ -42,7 +42,7 @@
 
   @media (min-width: $desktop) {
     max-width: 386px;
-    padding: 0px 65px;
+    padding: 0 65px;
   }
 }
 
@@ -81,8 +81,6 @@
     @include medium-title;
     margin: 27px 10px 21px 13px;
   }
-
-
 }
 
 .opportunities-list__item-paragraph {
@@ -94,7 +92,6 @@
     @media (min-width: $tablet) {
       display: flex;
       flex-direction: column;
-
     }
   }
 
