@@ -1,4 +1,6 @@
 .review {
+  margin: 20px 0 0 0;
+
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr;
@@ -26,7 +28,7 @@
   text-align: center;
   border-bottom: 1px solid $smoky-white;
   margin: 0;
-  padding: 0 20px;
+  padding: 15px 20px;
 
   @media (min-width: $tablet) {
     grid-column: 1 / 3;

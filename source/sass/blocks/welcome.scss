@@ -32,10 +32,19 @@
       bottom: 0;
     }
   }
+
+  &--sedona {
+    height: 158px;
+  }
 }
 
 .welcome__text-image {
   width: 282px;
+
+  &--sedona {
+    width: 229px;
+    margin-bottom: 15px;
+  }
 
   @media (min-width: $tablet) {
     width: 460px;
