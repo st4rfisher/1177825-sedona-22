@@ -1,17 +1,38 @@
 .reasons-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   list-style: none;
   background-color: $skyblue;
   color: $white;
-  padding: 0;
+  padding: 55px 0 0 0;
   margin: 0;
   overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-image: url("../img/reasons-decoration-before.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet) {
+    &::before {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content;
+    padding: 0;
   }
 }
 
@@ -32,9 +53,19 @@
   }
 
   &--uncolored {
+    row-gap: 10px;
     background-color: $shadow-grey;
     color: $black;
-    padding: 0 20px;
+    padding: 12px 35px 20px 35px;
+
+    @media (min-width: $tablet) {
+      padding: 43px 0 0 0;
+      height: 256px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100%;
+    }
   }
 }
 
@@ -47,25 +78,77 @@
     display: flex;
     flex-direction: column;
   }
+
+  .reasons-list__item--second & {
+    padding: 25px 0 0 0;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      padding-top: 0;
+    }
+  }
 }
 
 .reasons-list__item-title {
   @include title;
+  margin: 15px 0 0 0;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    @include medium-title;
+    margin: 0;
+    width: 192px;
+
+    .reasons-list__item--second &,
+    .reasons-list__item--uncolored & {
+      width: 150px;
+    }
+  }
+}
+
+.reasons-list__number {
+  margin: 10px 0 0 0;
+
+  @media (min-width: $tablet) {
+    .reasons-list__item--first &,
+    .reasons-list__item--second & {
+      margin: 0;
+    }
+  }
 }
 
 .reasons-list__item-paragraph {
   @include paragraph;
   text-align: center;
+  margin: 10px 0 0 0;
+
+  @media (min-width: $tablet) {
+    .reasons-list__item--first &,
+    .reasons-list__item--second & {
+      margin: 0;
+    }
+
+    .reasons-list__item--uncolored & {
+      margin: 18px 0 0 0;
+      padding: 0 40px;
+      line-height: 22px;
+    }
+  }
 }
 
 .reasons-list__item-image {
   display: block;
   background-color: $skyblue;
-  flex-grow: 1;
-  max-width: 800px;
   min-width: 520px;
+  max-width: 800px;
   margin: 0;
   width: 100%;
+  object-fit: cover;
+
+  @media (min-width: $tablet) {
+    min-width: 512px;
+    height: 256px;
+  }
 }
 
 .reasons-list__item-info {
@@ -77,5 +160,34 @@
 
   @media (min-width: $tablet) {
     max-width: 400px;
+  }
+
+  .reasons-list__item--first & {
+    padding: 0 14px 34px 14px;
+
+    @media (min-width: $tablet) {
+      padding: 34px 17px 34px 17px;
+      gap: 13px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 35px 68px 40px 70px;
+    }
+  }
+
+  .reasons-list__item--second & {
+    padding-bottom: 31px;
+
+    @media (min-width: $tablet) {
+      order: 2;
+      padding: 40px 40px 37px 36px;
+      row-gap: 13px;
+    }
+
+    @media (min-width: $desktop) {
+      order: 2;
+      padding: 31px 93px 34px 91px;
+      gap: 13px;
+    }
   }
 }

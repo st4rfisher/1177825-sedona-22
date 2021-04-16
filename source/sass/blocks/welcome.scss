@@ -1,4 +1,5 @@
 .welcome {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,9 +7,31 @@
   background-image: url("../img/welcome-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   box-sizing: border-box;
   padding: 0 20px;
+  height: 389px;
+
+  @media (min-width: $tablet) {
+    height: 518px;
+    padding: 0 20px 15px 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-image: url("../img/welcome-decoration-before.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      bottom: 0;
+    }
+  }
 }
 
 .welcome__text-image {
