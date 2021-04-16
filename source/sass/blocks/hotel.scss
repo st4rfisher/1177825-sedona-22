@@ -59,7 +59,6 @@
   padding: 15px 0 17px 0;
 
   @media (min-width: $tablet) {
-    @include medium-title;
     padding: 15px 12px 17px 12px;
     margin: 0;
   }
