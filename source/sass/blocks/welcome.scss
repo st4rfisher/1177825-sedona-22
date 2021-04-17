@@ -27,26 +27,39 @@
     background-position: center;
     height: 57px;
     width: 100%;
-
-    @media (min-width: $tablet) {
-      bottom: 0;
-    }
   }
 
   &--sedona {
     height: 158px;
+  
+    @media (min-width: $tablet) {
+      height: 290px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 301px;
+    }
   }
 }
 
 .welcome__text-image {
   width: 282px;
 
-  &--sedona {
-    width: 229px;
-    margin-bottom: 15px;
-  }
-
   @media (min-width: $tablet) {
     width: 460px;
+  }
+
+  &--sedona {
+    width: 229px;
+    margin: 0 0 15px 0;
+
+    @media (min-width: $tablet) {
+      width: 457px;
+      margin: 0px 0px 6px 5px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0px 2px 3px 0;
+    }
   }
 }
