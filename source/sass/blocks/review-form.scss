@@ -75,6 +75,10 @@
 }
 
 .review-form__legend {
+  @include title;
+  text-align: center;
+  max-width: 309px;
+
   @media (min-width: $tablet) {
     .review-form__fieldset--name &,
     .review-form__fieldset--impression & {
@@ -104,12 +108,6 @@
   }
 }
 
-.review-form__legend {
-  @include title;
-  text-align: center;
-  max-width: 309px;
-}
-
 .review-form label {
   @include text;
 }
@@ -126,8 +124,6 @@
     color: transparent;
   }
 }
-
-
 
 .review-form__name-list {
   display: flex;
@@ -274,7 +270,7 @@
 .review-form__radio:checked + .review-form__label::after {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -61px;
   width: 22px;
   height: 22px;
@@ -360,21 +356,16 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 51px 0 55px 0
+    margin: 51px 0 55px 0;
   }
-}
-
-.review-form__textarea::placeholder {
-  opacity: 1;
-  color:black;
 }
 
 .review-form__button {
   @include button-link;
   @include medium-title;
   box-sizing: border-box;
-  padding: 20px 33px 12px 32px;
   margin: 0 20px;
+  padding: 20px 33px 12px 32px;
 
   @media (min-width: $tablet) {
     order: 6;

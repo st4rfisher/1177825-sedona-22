@@ -31,7 +31,7 @@
 
   &--sedona {
     height: 158px;
-  
+
     @media (min-width: $tablet) {
       height: 290px;
     }
@@ -55,11 +55,11 @@
 
     @media (min-width: $tablet) {
       width: 457px;
-      margin: 0px 0px 6px 5px;
+      margin: 0 0 6px 5px;
     }
 
     @media (min-width: $desktop) {
-      margin: 0px 2px 3px 0;
+      margin: 0 2px 3px 0;
     }
   }
 }
