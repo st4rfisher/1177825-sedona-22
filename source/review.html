@@ -28,9 +28,9 @@
     </header>
     <main class="main">
       <div class="main__container">
-        <section class="welcome">
+        <section class="welcome welcome--inner-block">
           <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
-          <img class="welcome__text-image" src="img/sedona-text-image.svg" alt="Welcome text">
+          <img class="welcome__text-image welcome__text-image--inner" src="img/sedona-text-image.svg" alt="Welcome text">
         </section>
         <section class="review">
           <h2 class="review__title">Оставьте свой отзыв</h2>
@@ -41,15 +41,15 @@
               <ul class="review-form__name-list">
                 <li class="review-form__name-item">
                   <label for="name">Имя*:</label>
-                  <input class="review-form__input" type="text" name="name" id="name">
+                  <input class="review-form__input" type="text" name="name" id="name" placeholder="Петр">
                 </li>
                 <li class="review-form__name-item">
                   <label for="surname">Фамилия*:</label>
-                  <input class="review-form__input" type="text" name="surname" id="surname">
+                  <input class="review-form__input" type="text" name="surname" id="surname" placeholder="Иванов">
                 </li>
                 <li class="review-form__name-item">
                   <label for="patronymic">Отчество:</label>
-                  <input class="review-form__input" type="text" name="patronymic" id="patronymic">
+                  <input class="review-form__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
                 </li>
               </ul>
             </fieldset>
@@ -60,7 +60,7 @@
                 <li class="review-form__contacts-item">
                   <label for="phone"><span class="review-form__contacts-span">Контактный</span> телефон*:</label>
                   <input class="review-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон">
-                  <img src="img/icons/phone-icon.svg" alt="">
+                  <img class="review-form__contacts-image" src="img/icons/phone-icon.svg" alt="">
                 </li>
                 <li class="review-form__contacts-item">
                   <label for="email">Электронная почта*:</label>
@@ -74,16 +74,16 @@
               <legend class="review-form__legend">Ваше общее впечатление:</legend>
               <ul class="review-form__impression-list">
                 <li class="review-form__impression-item">
+                  <input class="review-form__radio visually-hidden" type="radio" name="impression-list-option" id="positive" value="Скорее положительное" checked>
                   <label class="review-form__label" for="positive">Скорее положительное</label>
-                  <input class="review-form__radio visually-hidden" type="radio" name="positive" id="positive" checked>
                 </li>
                 <li class="review-form__impression-item">
+                  <input class="review-form__radio visually-hidden" type="radio" name="impression-list-option" id="negative" value="Скорее отрицательное">
                   <label class="review-form__label" for="negative">Скорее отрицательное</label>
-                  <input class="review-form__radio visually-hidden" type="radio" name="negative" id="negative">
                 </li>
                 <li class="review-form__impression-item">
+                  <input class="review-form__radio visually-hidden" type="radio" name="impression-list-option" id="hard-to-answer" value="Затрудняюсь ответить">
                   <label class="review-form__label" for="hard-to-answer">Затрудняюсь ответить</label>
-                  <input class="review-form__radio visually-hidden" type="radio" name="hard-to-answer" id="hard-to-answer">
                 </li>
               </ul>
             </fieldset>
@@ -92,20 +92,20 @@
               <legend class="review-form__legend">Посещенные достопримечательности:</legend>
               <ul class="review-form__visited-list">
                 <li class="review-form__visited-item">
-                  <label for="devils-bridge">Мост Дьявола</label>
-                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="devils-bridge" id="devils-bridge" checked>
+                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="visited-list-option" id="devils-bridge"  value="Мост Дьявола" checked>
+                  <label class="review-form__label" for="devils-bridge">Мост Дьявола</label>
                 </li>
                 <li class="review-form__visited-item">
-                  <label for="bell-rock">Гора-Колокол</label>
-                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="bell-rock" id="bell-rock">
+                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="visited-list-option" id="bell-rock" value="Гора-Колокол" checked>
+                  <label class="review-form__label" for="bell-rock">Гора-Колокол</label>
                 </li>
                 <li class="review-form__visited-item">
-                  <label for="slide-rock-state-park">Слайд-парк</label>
-                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="slide-rock-state-park" id="slide-rock-state-park">
+                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="visited-list-option" id="slide-rock-state-park" value="Слайд-парк" checked>
+                  <label class="review-form__label" for="slide-rock-state-park">Слайд-парк</label>
                 </li>
                 <li class="review-form__visited-item">
-                  <label for="red-rocks">Красные скалы</label>
-                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
+                  <input class="review-form__checkbox visually-hidden" type="checkbox" name="visited-option" id="red-rocks" value="Красные скалы">
+                  <label class="review-form__label" for="red-rocks">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
@@ -113,8 +113,7 @@
             <fieldset class="review-form__fieldset review-form__fieldset--textarea">
               <legend class="review-form__legend">Опишите свои эмоции:</legend>
               <label for="textarea" class="visually-hidden">Поле для описания</label>
-              <textarea class="review-form__textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="Опишите подробно все свои восторги">
-              </textarea>
+              <textarea class="review-form__textarea" placeholder="Опишите подробно все свои восторги" name="textarea" id="textarea"></textarea>
             </fieldset>
 
             <button class="review-form__button" type="submit">Отправить отзыв</button>
@@ -124,7 +123,6 @@
         </section>
       </div>
     </main>
-
     <footer class="footer">
       <div class="footer__container">
         <a class="footer__hashtag" href="">#visitSedona</a>

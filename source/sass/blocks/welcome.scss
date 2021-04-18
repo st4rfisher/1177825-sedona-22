@@ -27,9 +27,17 @@
     background-position: center;
     height: 57px;
     width: 100%;
+  }
+
+  &--inner-block {
+    height: 158px;
 
     @media (min-width: $tablet) {
-      bottom: 0;
+      height: 290px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 301px;
     }
   }
 }
@@ -39,5 +47,19 @@
 
   @media (min-width: $tablet) {
     width: 460px;
+  }
+
+  &--inner {
+    width: 229px;
+    margin: 0 0 15px 0;
+
+    @media (min-width: $tablet) {
+      width: 457px;
+      margin: 0 0 6px 5px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0 2px 3px 0;
+    }
   }
 }
