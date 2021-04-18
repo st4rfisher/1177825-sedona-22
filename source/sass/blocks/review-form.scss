@@ -119,10 +119,6 @@
   &::placeholder {
     color: $black;
   }
-
-  &:focus::placeholder {
-    color: transparent;
-  }
 }
 
 .review-form__name-list {
@@ -333,7 +329,7 @@
   left: -63px;
   width: 23px;
   height: 16px;
-  background: url("../../img/icons/check-icon.svg");
+  background: url("../img/icons/check-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -357,6 +353,10 @@
 
   @media (min-width: $desktop) {
     margin: 51px 0 55px 0;
+  }
+
+  &::placeholder {
+    color: $black;
   }
 }
 
