@@ -1,6 +1,10 @@
 .video {
   margin: 15px 0 0 0;
   width: 100%;
+
+  @media (min-width: $tablet) {
+    margin: 28px 0 0 0;
+  }
 }
 
 .video__title {
@@ -9,6 +13,7 @@
   padding: 0 20px;
 
   @media (min-width: $tablet) {
+    @include big-title;
     padding: 0 60px;
   }
 
@@ -36,6 +41,10 @@
 
 .video__content {
   position: relative;
+
+  @media (min-width: $tablet) {
+    padding: 0 60px;
+  }
 }
 
 .video__preview {
@@ -43,17 +52,27 @@
   min-height: 201px;
   object-fit: cover;
   padding: 0 0 66px 0;
+
+  @media (min-width: $tablet) {
+    padding: 82px 0 66px 0;
+    height: 500px;
+  }
 }
 
 .video__panel {
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
   bottom: 4px;
   left: 0;
   width: 100%;
   box-sizing: border-box;
   padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0 60px;
+  }
 }
 
 .video__top-panel {
