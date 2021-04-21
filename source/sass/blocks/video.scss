@@ -1,13 +1,16 @@
 .video {
-  margin: 15px 0 0 0;
+  margin: 10px 0 0 0;
   width: 100%;
+  box-sizing: border-box;
 
   @media (min-width: $tablet) {
-    margin: 28px 0 0 0;
+    margin: 35px 0 0 0;
+    padding: 0 60px;
   }
 
   @media (min-width: $desktop) {
-    margin: 19px 0 0 0;
+    margin: 26px 0 0 0;
+    padding: 0 201px 0 199px;
   }
 }
 
@@ -15,10 +18,12 @@
   @include title;
   text-align: center;
   padding: 0 20px;
+  margin: 22px 0 19px 0;
 
   @media (min-width: $tablet) {
     @include big-title;
     padding: 0 60px;
+    margin: 22px 0 34px 0;
   }
 
   @media (min-width: $desktop) {
@@ -33,7 +38,6 @@
   max-width: 445px;
   text-align: center;
 
-
   @media (min-width: $tablet) {
     padding: 0 60px;
   }
@@ -43,77 +47,75 @@
   }
 }
 
+.video__content-wrapper {
+  @media (min-width: $tablet) {
+    height: 500px;
+  }
+}
+
 .video__content {
-  position: relative;
+  width: 100%;
+  padding: 0 0 105px 0;
 
   @media (min-width: $tablet) {
-    padding: 0 60px;
+    padding: 0;
+    margin: 79px 0 133px 0;
   }
 
   @media (min-width: $desktop) {
-    padding: 0 200px;
+    margin: 77px 0 83px 0;
   }
 }
 
 .video__preview {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   padding: 0 0 66px 0;
 
   @media (min-width: $tablet) {
-    height: 500px;
     padding: 80px 0 0 0;
+    height: 500px;
   }
 }
 
 .video__panel-wrapper {
   position: relative;
-  bottom: 114px;
+  bottom: 153px;
   margin: 0 20px;
 
   @media (min-width: $tablet) {
     margin: 0;
-    bottom: 97px;
+    bottom: 135px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 180px;
   }
 }
 
 .video__panel {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  background-image: linear-gradient(to top, $light-grey 65px, transparent 44px);
   box-sizing: border-box;
   padding: 0 0 24px 0;
+  width: calc(100%);
 
   @media (min-width: $tablet) {
     padding: 23px 41px 25px 35px;
     background-color: rgba(0, 0, 0, 0.6);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 67px;
-    background-color: $light-grey;
-
-    @media (min-width: $tablet) {
-      display: none;
-    }
+    background-image: none;
   }
 }
 
 .video__track-panel {
-  position: relative;
   order: 1;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
   padding: 22px 23px 20px 22px;
-  margin: 0 0 23px 0;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet) {
     flex: 1;
@@ -142,7 +144,8 @@
   cursor: pointer;
 
   @media (min-width: $tablet) {
-    left: 155px;
+    top: 41px;
+    left: 205px;
   }
 }
 

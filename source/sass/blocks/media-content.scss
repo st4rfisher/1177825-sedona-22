@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0 -73px 0;
+  margin: 20px 0 0 0;
 
   @media (min-width: $tablet) {
-    margin: 38px 0 -55px 0;
+    margin: 38px 0 0 0;
   }
 
   @media (min-width: $desktop) {
-    margin: 75px 0 -10px 0;
+    margin: 75px 0 0 0;
   }
 }
 
