@@ -53,7 +53,8 @@
 
   @media (min-width: $tablet) {
     padding: 0;
-    margin: 79px 0 133px 0;
+    margin: 79px 0 38px 0;
+    height: 500px;
   }
 
   @media (min-width: $desktop) {
@@ -61,13 +62,8 @@
   }
 }
 
-.video__preview {
-  padding: 0 0 66px 0;
-
-  @media (min-width: $tablet) {
-    padding: 80px 0 0 0;
-    height: 500px;
-  }
+.video__content[poster]{
+  object-fit: cover;
 }
 
 .video__panel-wrapper {
@@ -77,7 +73,7 @@
 
   @media (min-width: $tablet) {
     margin: 0;
-    bottom: 228px;
+    bottom: 135px;
   }
 
   @media (min-width: $desktop) {
