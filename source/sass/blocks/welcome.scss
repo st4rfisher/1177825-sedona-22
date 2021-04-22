@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   background-color: $white;
-  //background-image: url("../img/welcome-background.jpg");
   background-image: url("../img/welcome-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -13,9 +12,7 @@
   padding: 0 20px;
   height: 389px;
 
-  @media
-    (-webkit-min-device-pixel-ratio),
-    (min-resolution: 1.5dppx) {
+  @media (min-resolution: 1.5dppx) {
     background-image: url("../img/welcome-background-mobile@2x.jpg");
   }
 
@@ -40,13 +37,17 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     background-image: url("../img/welcome-decoration-before.svg");
     background-repeat: no-repeat;
     background-position: center;
     height: 57px;
     width: 100%;
+
+    @media (min-width: $tablet) {
+      bottom: -1px;
+    }
   }
 
   &--inner-block {
