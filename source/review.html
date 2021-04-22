@@ -10,7 +10,11 @@
     <header class="header">
       <div class="header__container">
         <a class="header__logo" href="index.html">
-          <img src="img/icons/logo-icon.svg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/icons/logo-desktop-icon.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet-icon.svg">
+            <img src="img/icons/logo-mobile-icon.svg">
+          </picture>
         </a>
 
         <nav class="navigation">
