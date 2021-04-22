@@ -21,4 +21,20 @@
   z-index: 2;
   left: 50%;
   transform: translate(-50%);
+  background-image: url("../img/icons/logo-mobile-icon.svg");
+  background-repeat: no-repeat;
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/icons/logo-tablet-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/icons/logo-desktop-icon.svg");
+    background-repeat: no-repeat;
+    width: 181px;
+    height: 97px;
+  }
 }
