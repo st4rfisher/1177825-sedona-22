@@ -49,14 +49,14 @@
 
 .video__wrapper {
   position: relative;
-  margin: 0 0 109px 0px;
+  margin: 0 0 109px 0;
 
   @media (min-width: $tablet) {
-    margin: 79px 0 42px 0px;
+    margin: 79px 0 42px 0;
   }
 
   @media (min-width: $desktop) {
-    margin: 77px 0 87px 0px;
+    margin: 77px 0 87px 0;
   }
 }
 
