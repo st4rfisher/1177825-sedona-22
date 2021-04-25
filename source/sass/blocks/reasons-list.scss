@@ -89,6 +89,8 @@
   }
 }
 
+
+
 .reasons-list__item-title {
   @include title;
   margin: 15px 0 0 0;
@@ -154,6 +156,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 0 20px;
+  flex: 1;
 
   @media (min-width: $tablet) {
     max-width: 400px;

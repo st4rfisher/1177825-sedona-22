@@ -14,10 +14,15 @@
   display: block;
   width: 47px;
   height: 48px;
-  background-color: $skyblue;
 
   @media (min-width: $tablet) {
     width: 46px;
     height: 48px;
   }
 }
+
+.social__item-image {
+  width: 46px;
+  height: 48px;
+}
+

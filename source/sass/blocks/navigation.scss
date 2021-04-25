@@ -9,10 +9,8 @@
 .navigation__toggle {
   display: block;
   position: absolute;
+  top: 17px;
   right: 0;
-  background-image: url("../img/icons/burger-menu-icon.svg");
-  width: 23px;
-  height: 22px;
   padding: 0;
   border: none;
   outline: none;
@@ -21,4 +19,9 @@
   @media (min-width: $tablet) {
     display: none;
   }
+}
+
+.navigation__toggle-image {
+  width: 23px;
+  height: 22px;
 }

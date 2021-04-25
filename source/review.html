@@ -14,7 +14,11 @@
     <header class="header">
       <div class="header__container">
         <a class="header__logo" href="index.html">
-          <img src="img/icons/logo-icon.svg" alt="Логотип Седона">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/icons/logo-icon-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-icon-tablet.svg">
+            <img src="img/icons/logo-icon-mobile.svg" alt="Логотип Седона">
+          </picture>
         </a>
 
         <nav class="navigation">
