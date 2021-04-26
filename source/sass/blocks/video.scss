@@ -191,10 +191,10 @@
 
 .video__button-icon {
   opacity: 1;
-}
+  fill: $pale-gray;
 
-.video__button-icon path {
   @media (min-width: $tablet) {
     fill: $white;
   }
 }
+

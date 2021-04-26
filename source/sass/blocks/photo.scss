@@ -112,12 +112,15 @@
   }
 }
 
-.photo__like-icon path {
+.photo__like-icon  {
+  opacity: 0.3;
+
   @media (min-width: $desktop) {
-    fill: $white;
     opacity: 1;
+    fill: $white;
   }
 }
+
 
 .photo__likes-counter {
   @include paragraph;
