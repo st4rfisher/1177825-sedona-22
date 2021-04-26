@@ -68,8 +68,9 @@
 }
 
 .review-form__fieldset legend {
-  position: relative;
   @include title;
+  position: relative;
+
 
   @media (min-width: $tablet) {
     @include medium-title;

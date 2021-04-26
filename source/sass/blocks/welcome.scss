@@ -64,9 +64,9 @@
 }
 
 .welcome__text-image {
+  user-select: none;
   width: 282px;
-  user-select:none;
-  
+
   @media (min-width: $tablet) {
     width: 460px;
   }

@@ -112,7 +112,7 @@
   }
 }
 
-.photo__like-icon  {
+.photo__like-icon {
   opacity: 0.3;
 
   @media (min-width: $desktop) {
@@ -120,7 +120,6 @@
     fill: $white;
   }
 }
-
 
 .photo__likes-counter {
   @include paragraph;
