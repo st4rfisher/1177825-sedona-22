@@ -65,7 +65,8 @@
 
 .welcome__text-image {
   width: 282px;
-
+  user-select:none;
+  
   @media (min-width: $tablet) {
     width: 460px;
   }
