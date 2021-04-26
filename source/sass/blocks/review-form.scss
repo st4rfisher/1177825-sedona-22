@@ -215,6 +215,11 @@
   }
 }
 
+.review-form__contacts-image {
+  width: 58px;
+  height: 58px;
+}
+
 .review-form__impression-list label,
 .review-form__visited-list label {
   @include title;
