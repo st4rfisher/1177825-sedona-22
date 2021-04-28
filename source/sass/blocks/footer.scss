@@ -26,6 +26,10 @@
   @include medium-title;
   background-color: transparent;
   color: $black;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .footer__developer {

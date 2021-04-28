@@ -65,4 +65,8 @@
   @media (min-width: $desktop) {
     margin: 7px 0 0 0;
   }
+
+  &--disabled {
+    background-color: $smoky-white;
+  }
 }

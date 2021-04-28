@@ -35,7 +35,31 @@
   }
 }
 
-.menu a {
+.menu__item-link {
   text-decoration: none;
   color: $black;
+
+  &:hover {
+    color: $skyblue;
+  }
+
+  &:active {
+    color: $black;
+    opacity: 0.3;
+  }
+}
+
+.menu__item-link {
+  .menu__item--active & {
+    color: $brown;
+
+    &:hover {
+      color: $dark-brown;
+    }
+
+    &:active {
+      color: $brown;
+      opacity: 0.3;
+    }
+  }
 }
