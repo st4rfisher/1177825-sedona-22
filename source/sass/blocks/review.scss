@@ -18,6 +18,7 @@
 .review__title {
   @include title;
   text-align: center;
+  user-select: none;
   padding: 0 20px;
 
   @media (min-width: $tablet) {

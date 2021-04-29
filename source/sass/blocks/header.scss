@@ -1,13 +1,14 @@
+
 .header__container {
   @include container;
   display: flex;
-  position: relative;
   height: 56px;
   box-sizing: border-box;
-  padding: 0 20px;
   background-color: $white;
+  margin-top: 223px;
 
   @media (min-width: $tablet) {
+    margin-top: 0;
     padding: 0 27px 0 48px;
   }
 

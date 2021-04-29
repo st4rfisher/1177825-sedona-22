@@ -156,6 +156,8 @@
   border: none;
   background-color: transparent;
   padding: 0;
+  cursor: pointer;
+  user-select: none;
 
   &--replay {
     order: 2;
@@ -193,7 +195,25 @@
   opacity: 1;
   fill: $pale-gray;
 
+
+  .video__button:hover & {
+    fill: $asphalt;
+  }
+
+  .video__button:active & {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet) {
     fill: $white;
+
+    .video__button:hover & {
+      fill: $white;
+      opacity: 0.6;
+    }
+
+    .video__button:active & {
+      opacity: 0.3;
+    }
   }
 }

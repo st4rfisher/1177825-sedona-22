@@ -22,14 +22,14 @@
 }
 
 .footer__hashtag {
-  @include button-link;
   @include medium-title;
-  background-color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  border: none;
+  text-align: center;
+  cursor: pointer;
   color: $black;
-
-  &:hover {
-    background-color: transparent;
-  }
 }
 
 .footer__developer {
@@ -40,10 +40,20 @@
 }
 
 .footer__developer-link {
+  display: block;
   margin-top: 5px;
 }
 
 .footer__developer-image {
   width: 27px;
   height: 34px;
+
+  .footer__developer-link:hover & {
+    fill: $skyblue;
+  }
+
+  .footer__developer-link:active & {
+    fill: $black;
+    opacity: 0.3;
+  }
 }

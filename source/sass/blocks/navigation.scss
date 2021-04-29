@@ -4,13 +4,18 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .navigation__toggle {
   display: block;
   position: absolute;
   top: 17px;
-  right: 0;
+  right: 20px;
   padding: 0;
   border: none;
   outline: none;
@@ -21,7 +26,25 @@
   }
 }
 
+.navigation__toggle--close {
+  top: -206px;
+  right: 20px;
+}
+
 .navigation__toggle-image {
   width: 23px;
   height: 22px;
 }
+
+.navigation__close-image {
+  cursor: pointer;
+
+  .navigation__toggle--close:hover & {
+    opacity: 0.6;
+  }
+
+  .navigation__toggle--close:active & {
+    opacity: 0.3;
+  }
+}
+
