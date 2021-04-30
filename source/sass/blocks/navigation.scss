@@ -1,35 +1,42 @@
 .navigation {
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-wrap: wrap;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  &--no-js {
+    position: static;
+  }
+
+  &--active {
+    display: block;
+  }
 
   @media (min-width: $tablet) {
     padding: 14px 27px 16px 48px;
   }
 }
 
-.navigation__button {
+.navigation__close-button {
   display: block;
   position: absolute;
+  top: 17px;
+  right: 20px;
   padding: 0;
   border: none;
   outline: none;
   background-color: transparent;
   cursor: pointer;
-
-  &--close {
-    top: 17px;
-    right: 20px;
-  }
 }
 
 .navigation__close-image {
-  .navigation__button--close:hover & {
+  .navigation__close-button:hover & {
     opacity: 0.6;
   }
 
-  .navigation__button--close:active & {
+  .navigation__close-button:active & {
     opacity: 0.3;
   }
 }

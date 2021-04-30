@@ -43,20 +43,17 @@
 .header__toggle {
   display: block;
   position: absolute;
+  top: 17px;
+  right: 20px;
   padding: 0;
   border: none;
   outline: none;
   background: none;
   cursor: pointer;
+  z-index: 1;
 
   @media (min-width: $tablet) {
    display: none;
-  }
-
-  &--open {
-    top: 17px;
-    right: 20px;
-    z-index: 1;
   }
 }
 
@@ -64,11 +61,11 @@
   width: 23px;
   height: 22px;
 
-  .header__toggle--open:hover & {
+  .header__toggle:hover & {
     opacity: 0.6;
   }
 
-  .header__toggle--open:active & {
+  .header__toggle:active & {
     opacity: 0.3;
   }
 }
