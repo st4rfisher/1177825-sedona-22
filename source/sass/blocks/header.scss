@@ -1,19 +1,36 @@
 
 .header__container {
   @include container;
-  display: flex;
-  height: 56px;
+  display: grid;
+  grid-template-rows: 1fr min-content;
   box-sizing: border-box;
   background-color: $white;
-  margin-top: 223px;
 
   @media (min-width: $tablet) {
-    margin-top: 0;
-    padding: 0 27px 0 48px;
+
   }
 
   @media (min-width: $desktop) {
-    padding: 0 71px 0 90px;
+    padding: 0 44px 0 42px;
+  }
+}
+
+
+.header__logo-wrapper {
+  position: relative;
+  width: calc(100% - 40px);
+  height: 56px;
+  background-color: $white;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    width: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background: none;
+    z-index: 1;
   }
 }
 
@@ -23,3 +40,4 @@
   left: 50%;
   transform: translate(-50%);
 }
+

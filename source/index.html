@@ -6,39 +6,41 @@
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="img/icons/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" href="img/icons/favicon32x32.png" sizes="32x32" type="image/png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="header">
       <div class="header__container">
-        <a class="header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/icons/logo-icon-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/icons/logo-icon-tablet.svg">
-            <img src="img/icons/logo-icon-mobile.svg" alt="Логотип Седона">
-          </picture>
-        </a>
-
         <nav class="navigation">
-          <ul class="menu menu--mobile">
-            <li class="menu__item menu__item--mobile menu__item--active"><a class="menu__item-link" href="index.html">Главная</a></li>
-            <li class="menu__item menu__item--mobile"><a class="menu__item-link" href="catalog.html">Фото и видео</a></li>
-            <li class="menu__item menu__item--mobile"><a class="menu__item-link" href="review.html">Форма отзыва</a></li>
-            <li class="menu__item menu__item--mobile"><a class="menu__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <ul class="menu">
+            <li class="menu__item menu__item--active"><a class="menu__item-link" href="index.html">Главная</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="catalog.html">Фото и видео</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="review.html">Форма отзыва</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
           </ul>
           <button class="navigation__toggle navigation__toggle--close" type="button" aria-label="Закрыть меню">
             <svg class="navigation__close-image" width="22" height="22" >
               <use xlink:href="img/icons/sprite.svg#close-icon"></use>
             </svg>
           </button>
+
           <button class="navigation__toggle navigation__toggle--open" type="button" aria-label="Открыть меню">
             <svg class="navigation__toggle-image" width="23" height="22" >
               <use xlink:href="img/icons/sprite.svg#burger-menu-icon"></use>
             </svg>
           </button>
         </nav>
+        <div class="header__logo-wrapper">
+          <a class="header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/icons/logo-icon-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/icons/logo-icon-tablet.svg">
+              <img src="img/icons/logo-icon-mobile.svg" alt="Логотип Седона">
+            </picture>
+          </a>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -194,5 +196,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/menu-show.js"></script>
   </body>
 </html>

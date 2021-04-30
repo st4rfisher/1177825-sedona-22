@@ -1,8 +1,12 @@
 const menu = document.querySelector('.menu');
-const menuMobile = document.querySelector('.menu--mobile');
+const menuJS = document.querySelector('.menu--js');
 const item = document.querySelector('.menu__item');
-const itemMobile = document.querySelector('.menu__item--mobile');
-const openToggle = document.querySelector('.navigation__toggle--open');
-const closeToggle = document.querySelector('.navigation__toggle--close');
+const openButton = document.querySelector('.navigation__toggle--open');
+const closeButton = document.querySelector('.navigation__toggle--close');
 
-let 
+// document.addEventListener('DOMContentLoaded', function() {
+//   menuJS.style.display = 'none';
+// });
+
+
+

@@ -3,42 +3,51 @@
   position: relative;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
-  padding: 0 20px;
 
   @media (min-width: $tablet) {
-    padding: 0;
+    padding: 14px 27px 16px 48px;
   }
 }
 
 .navigation__toggle {
   display: block;
   position: absolute;
-  top: 17px;
-  right: 20px;
   padding: 0;
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     display: none;
   }
 }
 
+.navigation__toggle--open {
+  bottom: -42px;
+  right: 20px;
+  z-index: 1;
+}
+
 .navigation__toggle--close {
-  top: -206px;
+  top: 17px;
   right: 20px;
 }
 
 .navigation__toggle-image {
   width: 23px;
   height: 22px;
+
+  .navigation__toggle--open:hover & {
+    opacity: 0.6;
+  }
+
+  .navigation__toggle--open:active & {
+    opacity: 0.3;
+  }
 }
 
 .navigation__close-image {
-  cursor: pointer;
-
   .navigation__toggle--close:hover & {
     opacity: 0.6;
   }
