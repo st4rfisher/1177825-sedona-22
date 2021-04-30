@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  box-sizing: border-box;
   z-index: 10;
 
   &--no-js {
@@ -29,6 +30,10 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .navigation__close-image {
