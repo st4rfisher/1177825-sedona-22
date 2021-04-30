@@ -20,19 +20,13 @@
             <li class="menu__item"><a class="menu__item-link" href="review.html">Форма отзыва</a></li>
             <li class="menu__item"><a class="menu__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
           </ul>
-          <button class="navigation__toggle navigation__toggle--close" type="button" aria-label="Закрыть меню">
+          <button class="navigation__button navigation__button--close" type="button" aria-label="Закрыть меню">
             <svg class="navigation__close-image" width="22" height="22" >
               <use xlink:href="img/icons/sprite.svg#close-icon"></use>
             </svg>
           </button>
-
-          <button class="navigation__toggle navigation__toggle--open" type="button" aria-label="Открыть меню">
-            <svg class="navigation__toggle-image" width="23" height="22" >
-              <use xlink:href="img/icons/sprite.svg#burger-menu-icon"></use>
-            </svg>
-          </button>
         </nav>
-        <div class="header__logo-wrapper">
+        <div class="header__panel">
           <a class="header__logo" href="index.html">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/icons/logo-icon-desktop.svg">
@@ -40,6 +34,12 @@
               <img src="img/icons/logo-icon-mobile.svg" alt="Логотип Седона">
             </picture>
           </a>
+
+          <button class="header__toggle header__toggle--open" type="button" aria-label="Открыть меню">
+            <svg class="header__toggle-image" width="23" height="22" >
+              <use xlink:href="img/icons/sprite.svg#burger-menu-icon"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
