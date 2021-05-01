@@ -6,18 +6,42 @@
   column-gap: 6px;
 
   @media (min-width: $tablet) {
-    margin-right: 10px;
+    margin-right: 8px;
   }
 }
 
+.social__item {
+
+}
+
 .social__item-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 47px;
   height: 48px;
+  color: $skyblue;
   background-color: $skyblue;
+
+  &:hover {
+    background-color: $blue;
+  }
+
+  &:active {
+    color: $dark-blue;
+  }
 
   @media (min-width: $tablet) {
     width: 46px;
     height: 48px;
+  }
+}
+
+.social__item-image {
+  width:  19px;
+  height: 19px;
+
+  .social__item-link:active & {
+    opacity: 0.3;
   }
 }

@@ -57,4 +57,19 @@
   background-color: $skyblue;
   border: none;
   text-align: center;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $blue;
+  }
+
+  &:focus {
+    background-color: $dark-blue;
+    color: 	rgba(255,255,255,0.3);
+  }
+}
+
+@mixin disabled-button-link {
+  background-color: $smoky-white;
+
 }

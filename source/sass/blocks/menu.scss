@@ -1,6 +1,8 @@
 .menu {
   @include text;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   list-style: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -10,10 +12,74 @@
   width: 100%;
 
   @media (min-width: $tablet) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
+
+.menu__item {
+  background-color: $skyblue;
+  box-sizing: border-box;
+  padding: 17px 20px 11px 19px;
+  font-size: 18px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid $dark-blue;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+
+  &:hover {
+    background-color: $blue;
+
+    @media (min-width: $tablet) {
+      background: none;
+    }
+  }
+
+  &:last-child {
+    box-shadow: inset 0px -5px 5px 0px rgba(34, 60, 80, 0.2);
+    border-bottom: none;
+
+    @media (min-width: $tablet) {
+      box-shadow: none;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    background-color: $white;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+
+
+// .menu--mobile {
+//   display: block;
+//   position: absolute;
+//   top: -224px;
+//   left: 0;
+// }
+
+// .menu__item--mobile {
+//   text-align: center;
+//   background-color: $skyblue;
+//   box-sizing: border-box;
+//   padding: 18px 20px 10px 19px;
+//   font-size: 18px;
+//   border-top: 1px solid rgba(255,255,255,0.3);
+//   border-bottom: 1px solid $dark-blue;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: $blue;
+//   }
+// }
+
+// .menu__item--mobile:last-child {
+//   box-shadow: inset 0px -5px 5px 0px rgba(34, 60, 80, 0.2);
+// }
 
 .menu__item:nth-child(2) {
   @media (min-width: $tablet) {
@@ -35,7 +101,49 @@
   }
 }
 
-.menu a {
+.menu__item-link {
   text-decoration: none;
-  color: $black;
+  color: $white;
+
+  &:hover {
+    background-color: $blue;
+
+    @media (min-width: $tablet) {
+      background: none;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    @include text;
+    color: $black;
+    font-weight: bold;
+  }
 }
+
+// .menu__item-link {
+//   color: $white;
+//   .menu__item--active & {
+//     color: $brown;
+//   }
+// }
+
+// &:hover {
+//   color: $dark-brown;
+
+//   @media (max-width:767px) {
+//     color: $white;
+//   }
+// }
+
+// &:active {
+//   color: $brown;
+//   opacity: 0.3;
+// }
+
+// @media (max-width:767px) {
+//   color: $white;
+// }

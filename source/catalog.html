@@ -4,24 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="img/icons/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="img/icons/favicon32x32.png" sizes="32x32" type="image/png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="header">
       <div class="header__container">
         <a class="header__logo" href="index.html">
-          <img src="img/icons/logo-icon.svg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/icons/logo-icon-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-icon-tablet.svg">
+            <img src="img/icons/logo-icon-mobile.svg" alt="Логотип Седона">
+          </picture>
         </a>
 
         <nav class="navigation">
           <ul class="menu">
-            <li class="menu__item"><a href="index.html">Главная</a></li>
-            <li class="menu__item"><a href="catalog.html">Фото и видео</a></li>
-            <li class="menu__item"><a href="review.html">Форма отзыва</a></li>
-            <li class="menu__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="index.html">Главная</a></li>
+            <li class="menu__item menu__item--active"><a class="menu__item-link" href="catalog.html">Фото и видео</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="review.html">Форма отзыва</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
           </ul>
-          <button class="navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+          <button class="navigation__toggle" type="button" aria-label="Открыть меню">
+            <svg class="navigation__toggle-image" width="23" height="22" >
+              <use xlink:href="img/icons/sprite.svg#burger-menu-icon"></use>
+            </svg>
           </button>
         </nav>
       </div>
@@ -29,9 +39,9 @@
 
     <main class="main">
         <div class="main__container">
-          <section class="welcome">
+          <section class="welcome welcome--inner-block">
             <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
-            <img class="welcome__text-image" src="img/sedona-text-image.svg" alt="Welcome text">
+            <img class="welcome__text-image welcome__text-image--inner" src="img/sedona-text-image.svg" alt="Welcome text">
           </section>
           <section class="media-content">
             <h2 class="media-content__title">Фото и видео</h2>
@@ -39,15 +49,19 @@
             <ul class="photos-list">
               <li class="photos-list__item photos-list__item--wide">
                 <div class="photo">
-                  <a class="photo__image-link" href="">
-                    <img src="img/photo-1.jpg" alt="Фото дороги на равнине">
+                  <a class="photo__image-link photo__image-link--wide" href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                      <img class="photo__image" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Фото дороги на равнине">
+                    </picture>
                   </a>
-                  <div class="photo__info">
+                  <div class="photo__info photo__info--wide">
                     <h3 class="photo__title">Неродные просторы</h3>
                     <p class="photo__author">Автор фото: Борис</p>
-                    <div class="photo__likes">
-                      <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                    <div class="photo__likes photo__likes--wide">
+                      <svg class="photo__like-icon" width="23" height="21" >
+                        <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                       </svg>
 
                       <span class="photo__likes-counter">1350</span>
@@ -57,15 +71,19 @@
               </li>
               <li class="photos-list__item">
                 <div class="photo">
-                  <a class="photo__image-link" href="">
-                    <img src="img/photo-2.jpg" alt="Фото растительности">
+                  <a class="photo__image-link" href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                      <img class="photo__image" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Фото растительности">
+                    </picture>
                   </a>
                   <div class="photo__info">
                     <h3 class="photo__title">Местная растительность</h3>
                     <p class="photo__author">Автор фото: Сергей</p>
                     <div class="photo__likes">
-                      <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                      <svg class="photo__like-icon" width="23" height="21" >
+                        <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                       </svg>
                       <span class="photo__likes-counter">143</span>
                     </div>
@@ -75,16 +93,20 @@
               <li class="photos-list__item">
                 <div class="photo">
                   <a class="photo__image-link" href="">
-                    <img src=img/photo-3.jpg alt="Фото дороги на горе">
+                    <picture>
+                      <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                      <img class="photo__image" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Фото дороги на горе">
+                    </picture>
                   </a>
                   <div class="photo__info">
                     <h3 class="photo__title">Дорога на север</h3>
                     <p class="photo__author">Автор фото: Петр</p>
                     <div class="photo__likes">
-                      <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                      <svg class="photo__like-icon" width="23" height="21" >
+                        <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                       </svg>
-                      <span class="photo__likes-counter">1350</span>
+                      <span class="photo__likes-counter">96</span>
                     </div>
                   </div>
                 </div>
@@ -92,16 +114,20 @@
               <li class="photos-list__item">
                 <div class="photo">
                   <a class="photo__image-link" href="">
-                    <img src="img/photo-4.jpg" alt="Фото Моста Дьявола">
+                    <picture>
+                      <source media="(min-width: 1200px)" srcset="img/photo-devils-bridge-desktop@1x.jpg 1x, img/photo-devils-bridge-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/photo-devils-bridge-tablet@1x.jpg 1x, img/photo-devils-bridge-tablet@2x.jpg 2x">
+                      <img class="photo__image" src="img/photo-devils-bridge-mobile@1x.jpg" srcset="img/photo-devils-bridge-mobile@2x.jpg 2x" alt="Фото Моста Дьявола">
+                    </picture>
                   </a>
                   <div class="photo__info">
                     <h3 class="photo__title">Мост Дьявола</h3>
-                    <p class="photo__author">Автор фото: Борис</p>
+                    <p class="photo__author">Автор фото: Антон</p>
                     <div class="photo__likes">
-                      <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                      <svg class="photo__like-icon" width="23" height="21">
+                        <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                       </svg>
-                      <span class="photo__likes-counter">1350</span>
+                      <span class="photo__likes-counter">254</span>
                     </div>
                   </div>
                 </div>
@@ -110,20 +136,29 @@
             <div class="video">
               <h3 class="video__title">Все еще сомневаетесь?</h3>
               <p class="video__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-              <video class="video__video-content" src="">
-              </video>
-              <div class="video__panel">
-                <div class="video__track">
+              <div class="video__wrapper">
+                <video class="video__content" poster="img/video-preview-desktop@1x.jpg"></video>
+                <div class="video__panel">
+                  <button class="video__button video__button--replay">
+                    <svg class="video__button-icon" width="16" height="20">
+                      <use xlink:href="img/icons/sprite.svg#replay-icon"></use>
+                    </svg>
+                  </button>
+                  <div class="video__track-panel">
+                    <div class="video__track"></div>
+                    <div class="video__scroll"></div>
+                  </div>
+                  <button class="video__button video__button--subtitles">
+                    <svg class="video__button-icon" width="32" height="20">
+                      <use xlink:href="img/icons/sprite.svg#subtitles-icon"></use>
+                    </svg>
+                  </button>
+                  <button class="video__button video__button--fullscreen">
+                    <svg class="video__button-icon" width="20" height="20">
+                      <use xlink:href="img/icons/sprite.svg#fullscreen-icon"></use>
+                    </svg>
+                  </button>
                 </div>
-                <button class="video__replay">
-                  <img src="img/icons/replay-icon.svg" alt="Воспроизвести видео сначало">
-                </button>
-                <button class="video__subtitles">
-                  <img src="img/icons/subtitles-icon.svg" alt="Включить субтитры">
-                </button>
-                <button class="video__fullscreen">
-                  <img src="img/icons/fullscreen-icon.svg" alt="Открыть видео во весь экран">
-                </button>
               </div>
             </div>
           </section>
@@ -131,32 +166,29 @@
     </main>
     <footer class="footer">
       <div class="footer__container">
-        <a class="footer__hashtag" href="">#visitSedona</a>
+        <a class="footer__hashtag" href="https://www.instagram.com/explore/tags/visitsedona/">#visitSedona</a>
         <ul class="social">
           <li class="social__item">
             <span class="visually-hidden">Twitter</span>
-            <a class="social__item-link" href="">
-              <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="46" height="48" fill="#81B3D2"/>
-                <path d="M25.3 16.1667C27 15.6667 28.4 16.3667 29 17.2667C29.7 17.0667 30.4 16.7667 31.1 16.5667C31.1 17.3667 30.6 18.0667 30.2 18.2667C30.9 18.4667 31.5 17.7667 31.5 17.7667C31.3 18.7667 30.5 19.4667 29.9 19.7667C29.7 26.3667 26.6 30.7667 19.5 30.5667C19 30.5667 19.6 30.5667 19 30.5667C18.6 30.5667 14.7 30.1667 14 28.7667C16.3 28.9667 18 28.3667 18.8 27.6667C17.8 27.3667 16 27.1667 15.7 24.7667C16.1 24.8667 16.3 24.9667 17 24.8667C15.8 24.0667 14.4 23.3667 14.5 21.1667C14.8 21.4667 15.6 21.6667 15.9 21.6667C15.2 21.4667 13.9 18.3667 15 16.8667C16.9 18.6667 18.8 20.3667 22.4 20.5667C22.5 18.2667 23.5 16.7667 25.3 16.1667Z" fill="white"/>
+            <a class="social__item-link" href="https://twitter.com/CityofSedonaAZ">
+              <svg class="social__item-image" width="18" height="15">
+                <use xlink:href="img/icons/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <span class="visually-hidden">Facebook</span>
-            <a class="social__item-link" href="">
-              <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="47" height="48" fill="#81B3D2"/>
-                <path d="M25.3 16.4C26.1 16.4 26.9 16.4 27.7 16.4C27.7 15.3 27.7 14.2 27.7 13C26.7 13 25.8 13 24.8 13C21.7 13.2 20.5 15.4 20.9 19.1H19V22.6H21C21 25.7 21 28.8 21 31.9C22.3 31.9 23.6 31.9 24.8 31.9C24.8 28.8 24.8 25.7 24.8 22.6H27.7V19.1H24.8C24.8 18.1 24.8 16.7 25.3 16.4Z" fill="white"/>
+            <a class="social__item-link" href="https://www.facebook.com/CityofSedonaAZ/">
+              <svg class="social__item-image" width="9" height="19">
+                <use xlink:href="img/icons/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <span class="visually-hidden">Youtube</span>
-            <a class="social__item-link" href="">
-              <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="46" height="48" fill="#81B3D2"/>
-                <path d="M30.1 17H15.8C14.3 17 13 18.3 13 19.8V28.1C13 29.7 14.3 31 15.8 31H30.1C31.7 31 32.9 29.7 32.9 28.2V19.8C33 18.3 31.7 17 30.1 17ZM20 27.4V20.6L26.8 24L20 27.4Z" fill="white"/>
+            <a class="social__item-link" href="https://www.youtube.com/channel/UC5sk8T2Uvy2NAttccIqT9Yg">
+              <svg class="social__item-image" width="20" height="14">
+                <use xlink:href="img/icons/sprite.svg#youtube-icon"></use>
               </svg>
             </a>
           </li>
@@ -164,7 +196,10 @@
         <div class="footer__developer">
           <span>Разработано</span>
           <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/icons/htmlacademy-icon.svg" alt="Иконка разработчика">
+            <span class="visually-hidden">Сайт разработчика HTML Academy</span>
+            <svg class="footer__developer-image">
+              <use xlink:href="img/icons/sprite.svg#htmlacademy-icon"></use>
+            </svg>
           </a>
         </div>
       </div>

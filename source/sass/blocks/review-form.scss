@@ -37,7 +37,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 0 0 0 79px;
+    padding: 0 0 0 78px;
+    border-left: 2px solid $soft-grey;
   }
 }
 
@@ -68,6 +69,8 @@
 
 .review-form__fieldset legend {
   @include title;
+  position: relative;
+
 
   @media (min-width: $tablet) {
     @include medium-title;
@@ -78,6 +81,7 @@
   @include title;
   text-align: center;
   max-width: 309px;
+  user-select: none;
 
   @media (min-width: $tablet) {
     .review-form__fieldset--name &,
@@ -94,7 +98,7 @@
   @media (min-width: $tablet) {
     order: 4;
     grid-column: 1 / 3;
-    margin: 23px 0 0 0;
+    margin: 24px 0 0 0;
     padding-bottom: 65px;
   }
 }
@@ -118,6 +122,7 @@
 
   &::placeholder {
     color: $black;
+    user-select: none;
   }
 }
 
@@ -141,6 +146,7 @@
 
 .review-form__name-item label {
   margin-right: 14px;
+  user-select: none;
 }
 
 .review-form__name-item input {
@@ -148,7 +154,19 @@
   background-color: $light-grey;
   border: none;
   box-sizing: border-box;
-  padding: 18px 32px 14px 22px;
+  padding: 14px 28px 10px 18px;
+  border: 4px solid $light-grey;
+
+  &:hover {
+    background-color: $smoky-white;
+    border: 4px solid $smoky-white;
+  }
+
+  &:focus {
+    background-color: $white;
+    outline: none;
+    border: 4px solid $smoky-white;
+  }
 }
 
 .review-form__contacts-list {
@@ -187,26 +205,43 @@
   grid-column: 1 / 3;
   margin: 0 0 8px 22px;
   white-space: nowrap;
+  user-select: none;
 
   @media (min-width: $tablet) {
     margin: 3px 0 8px 22px;
   }
 
   @media (min-width: $desktop) {
-    margin: 0 16px 0 0;
+    margin: 5px 16px 0 0;
   }
 }
 
 .review-form__contacts-item input {
-  width: 100%;
   background-color: $light-grey;
   border: none;
   box-sizing: border-box;
-  padding: 18px 32px 14px 22px;
+  padding: 13px 0px 10px 17px;
+  border: 4px solid $light-grey;
+
+  &:hover {
+    background-color: $smoky-white;
+    border: 4px solid $smoky-white;
+  }
+
+  &:focus {
+    background-color: $white;
+    outline: none;
+    border: 4px solid $smoky-white;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 14px 32px 10px 18px;
+  }
 
   @media (min-width: $desktop) {
-    padding: 18px 36px 14px 22px;
+    flex-grow: 1;
   }
+
 }
 
 .review-form__contacts-span {
@@ -215,10 +250,17 @@
   }
 }
 
+.review-form__contacts-image {
+  width: 58px;
+  height: 58px;
+}
+
 .review-form__impression-list label,
 .review-form__visited-list label {
   @include title;
   text-transform: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 .review-form__impression-list {
@@ -245,6 +287,7 @@
 
 .review-form__impression-item {
   position: relative;
+
 }
 
 .review-form__radio + .review-form__label::before {
@@ -252,21 +295,32 @@
   position: absolute;
   background-color: $light-grey;
   left: -77px;
-  bottom: -11px;
-  width: 53px;
-  height: 53px;
+  bottom: -13px;
+  width: 54px;
+  height: 54px;
   box-sizing: border-box;
   border-radius: 50%;
 
   @media (min-width: $tablet) {
-    left: -73px;
+    bottom: -12px;
+    left: -74px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: -12px;
+    left: -74px;
+  }
+
+  .review-form__impression-item:hover & {
+    background-color: $smoky-white;
   }
 }
+
 
 .review-form__radio:checked + .review-form__label::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 1px;
   left: -61px;
   width: 22px;
   height: 22px;
@@ -275,6 +329,11 @@
 
   @media (min-width: $tablet) {
     left: -58px;
+    top: 0px;
+  }
+
+  .review-form__impression-item:active & {
+    opacity: 0.3;
   }
 }
 
@@ -303,6 +362,7 @@
   @media (min-width: $desktop) {
     display: flex;
     flex-direction: row;
+    padding-left: 78px;
   }
 }
 
@@ -320,6 +380,10 @@
   box-sizing: border-box;
   border-radius: 3px;
   background-color: $light-grey;
+
+  .review-form__visited-item:hover & {
+    background-color: $smoky-white;
+  }
 }
 
 .review-form__checkbox:checked + label::after {
@@ -332,6 +396,10 @@
   background: url("../img/icons/check-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  .review-form__visited-item:active & {
+    opacity: 0.3;
+  }
 }
 
 .review-form__textarea {
@@ -345,6 +413,18 @@
   border: none;
   background-color: $light-grey;
   resize: none;
+  border: 4px solid $light-grey;
+
+  &:hover {
+    background-color: $smoky-white;
+    border: 4px solid $smoky-white;
+  }
+
+  &:focus {
+    background-color: $white;
+    outline: none;
+    border: 4px solid $smoky-white;
+  }
 
   @media (min-width: $tablet) {
     margin: 54px 0 54px 0;
@@ -357,6 +437,7 @@
 
   &::placeholder {
     color: $black;
+    user-select: none;
   }
 }
 

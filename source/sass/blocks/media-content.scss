@@ -1,9 +1,25 @@
+.media-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 0 0;
+
+  @media (min-width: $tablet) {
+    margin: 38px 0 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 75px 0 0 0;
+  }
+}
+
 .media-content__title {
   @include title;
   padding: 0 20px;
   text-align: center;
 
   @media (min-width: $tablet) {
+    @include big-title;
     padding: 0 60px;
   }
 
@@ -14,13 +30,14 @@
 
 .media-content__intro {
   @include paragraph;
-  padding: 0 20px;
-  max-width: 458px;
+  box-sizing: border-box;
+  padding: 0 20px 31px 20px;
+  max-width: 430px;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px 0 0 0;
 
   @media (min-width: $tablet) {
-    padding: 0 60px;
+    padding: 0;
   }
 
   @media (min-width: $desktop) {

@@ -7,7 +7,7 @@
   row-gap: 34px;
   min-height: 116px;
   box-sizing: border-box;
-  padding: 35px 20px 14px 20px;
+  padding: 35px 20px 20px 20px;
   background-color: $white;
 
   @media (min-width: $tablet) {
@@ -22,9 +22,13 @@
 }
 
 .footer__hashtag {
-  @include button-link;
   @include medium-title;
-  background-color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  border: none;
+  text-align: center;
+  cursor: pointer;
   color: $black;
 }
 
@@ -35,6 +39,21 @@
   column-gap: 13px;
 }
 
-.footer__developer-link img {
+.footer__developer-link {
+  display: block;
   margin-top: 5px;
+}
+
+.footer__developer-image {
+  width: 27px;
+  height: 34px;
+
+  .footer__developer-link:hover & {
+    fill: $skyblue;
+  }
+
+  .footer__developer-link:active & {
+    fill: $black;
+    opacity: 0.3;
+  }
 }
