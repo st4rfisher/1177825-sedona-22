@@ -19,8 +19,6 @@
 
 .menu__item {
   background-color: $skyblue;
-  box-sizing: border-box;
-  padding: 17px 20px 11px 19px;
   font-size: 18px;
   border-top: 1px solid rgba(255,255,255,0.3);
   border-bottom: 1px solid $dark-blue;
@@ -53,34 +51,6 @@
   }
 }
 
-
-
-// .menu--mobile {
-//   display: block;
-//   position: absolute;
-//   top: -224px;
-//   left: 0;
-// }
-
-// .menu__item--mobile {
-//   text-align: center;
-//   background-color: $skyblue;
-//   box-sizing: border-box;
-//   padding: 18px 20px 10px 19px;
-//   font-size: 18px;
-//   border-top: 1px solid rgba(255,255,255,0.3);
-//   border-bottom: 1px solid $dark-blue;
-//   cursor: pointer;
-
-//   &:hover {
-//     background-color: $blue;
-//   }
-// }
-
-// .menu__item--mobile:last-child {
-//   box-shadow: inset 0px -5px 5px 0px rgba(34, 60, 80, 0.2);
-// }
-
 .menu__item:nth-child(2) {
   @media (min-width: $tablet) {
     margin-left: 26px;
@@ -102,48 +72,40 @@
 }
 
 .menu__item-link {
+  display: block;
+  box-sizing: border-box;
+  padding: 17px 20px 11px 19px;
   text-decoration: none;
   color: $white;
 
   &:hover {
     background-color: $blue;
+    color: $white;
 
     @media (min-width: $tablet) {
       background: none;
+      color: $dark-brown;
     }
   }
 
   &:active {
     opacity: 0.3;
+
+    @media (min-width: $tablet) {
+      color: $brown;
+    }
   }
 
   @media (min-width: $tablet) {
     @include text;
     color: $black;
     font-weight: bold;
+    padding: 0;
+  }
+
+  .menu__item--active & {
+    @media (min-width: $tablet) {
+      color: $brown;
+    }
   }
 }
-
-// .menu__item-link {
-//   color: $white;
-//   .menu__item--active & {
-//     color: $brown;
-//   }
-// }
-
-// &:hover {
-//   color: $dark-brown;
-
-//   @media (max-width:767px) {
-//     color: $white;
-//   }
-// }
-
-// &:active {
-//   color: $brown;
-//   opacity: 0.3;
-// }
-
-// @media (max-width:767px) {
-//   color: $white;
-// }

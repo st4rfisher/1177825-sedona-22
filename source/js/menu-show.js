@@ -1,12 +1,16 @@
 const navigation = document.querySelector('.navigation');
-const navigationActive = document.querySelector('.navigation--active');
-const item = document.querySelector('.menu__item');
-const openButton = document.querySelector('.navigation__toggle--open');
-const closeButton = document.querySelector('.navigation__toggle--close');
+const openButton = document.querySelector('.header__toggle');
+const closeButton = navigation.querySelector('.navigation__close-button');
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   menuJS.style.display = 'none';
-// });
+var removeClasses = () => {
+  navigation.classList.remove('navigation--active', 'navigation--no-js');
+}
 
+var addClasses = () => {
+  navigation.classList.add('navigation--active', 'navigation--no-js');
+}
 
+document.addEventListener('DOMContentLoaded', removeClasses);
+openButton.addEventListener('click', addClasses);
+closeButton.addEventListener('click', removeClasses);
 
