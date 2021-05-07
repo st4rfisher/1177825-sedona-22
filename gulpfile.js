@@ -6,12 +6,16 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
-const terser = require("gulp-terser");
+const csso = require("postcss-csso");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
 const del = require("del");
+const concat = require('gulp-concat');
+const uglifyes = require('uglify-es');
+const composer = require('gulp-uglify/composer');
+const uglify = composer(uglifyes, console);
 
 // HTML
 const html = () => {
@@ -31,6 +35,10 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -41,9 +49,14 @@ exports.styles = styles;
 // Scripts
 const scripts = () => {
   return gulp.src("source/js/*.js")
-    .pipe(terser())
-    .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("build/js"))
+    .pipe(plumber())
+    .pipe(concat("scripts.js"))
+    .pipe(gulp.dest("build/js/"))
+    .pipe(rename("scripts.min.js"))
+    .pipe(uglify({
+      mangle: false,
+    }))
+    .pipe(gulp.dest("build/js/"))
     .pipe(sync.stream());
 }
 
@@ -135,13 +148,12 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
-
 const build = gulp.series(
   clean,
   copy,
@@ -157,7 +169,7 @@ const build = gulp.series(
 
 exports.build = build;
 
-
+// Start
 exports.default = gulp.series(
   clean,
   copy,
