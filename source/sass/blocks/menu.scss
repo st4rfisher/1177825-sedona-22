@@ -20,7 +20,7 @@
 .menu__item {
   background-color: $skyblue;
   font-size: 18px;
-  border-top: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid $dark-blue;
   cursor: pointer;
   text-align: center;
@@ -35,7 +35,7 @@
   }
 
   &:last-child {
-    box-shadow: inset 0px -5px 5px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: inset 0 -5px 5px 0 rgba(34, 60, 80, 0.2);
     border-bottom: none;
 
     @media (min-width: $tablet) {

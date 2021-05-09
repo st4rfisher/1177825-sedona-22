@@ -12,9 +12,9 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
 const del = require("del");
-const concat = require('gulp-concat');
-const uglifyes = require('uglify-es');
-const composer = require('gulp-uglify/composer');
+const concat = require("gulp-concat");
+const uglifyes = require("uglify-es");
+const composer = require("gulp-uglify/composer");
 const uglify = composer(uglifyes, console);
 
 // HTML
@@ -27,6 +27,25 @@ const html = () => {
 exports.html = html;
 
 // Styles
+// const styles = () => {
+//   return gulp.src("source/sass/style.scss")
+//     .pipe(plumber())
+//     .pipe(sourcemap.init())
+//     .pipe(sass())
+//     .pipe(postcss([
+//       autoprefixer()
+//     ]))
+//     .pipe(rename("style.css"))
+//     .pipe(gulp.dest("build/css"))
+//     .pipe(csso())
+//     .pipe(rename("style.min.css"))
+//     .pipe(sourcemap.write("."))
+//     .pipe(gulp.dest("build/css"))
+//     .pipe(sync.stream());
+// }
+//
+
+// Styles
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -37,7 +56,9 @@ const styles = () => {
     ]))
     .pipe(rename("style.css"))
     .pipe(gulp.dest("build/css"))
-    .pipe(csso())
+    .pipe(postcss([
+      csso()
+    ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -46,17 +67,16 @@ const styles = () => {
 
 exports.styles = styles;
 
-
 // Scripts
 const scripts = () => {
   return gulp.src("source/js/*.js")
     .pipe(plumber())
     .pipe(concat("scripts.js"))
     .pipe(gulp.dest("build/js/"))
-    .pipe(rename("scripts.min.js"))
     .pipe(uglify({
       mangle: false,
     }))
+    .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest("build/js/"))
     .pipe(sync.stream());
 }
@@ -186,4 +206,3 @@ exports.default = gulp.series(
     server,
     watcher
   ));
-
