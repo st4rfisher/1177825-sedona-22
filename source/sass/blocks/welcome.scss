@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $white;
+  background-color: $blue;
   background-image: url("../img/welcome-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +37,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     background-image: url("../img/welcome-decoration-before.svg");
     background-repeat: no-repeat;
