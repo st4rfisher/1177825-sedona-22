@@ -27,25 +27,6 @@ const html = () => {
 exports.html = html;
 
 // Styles
-// const styles = () => {
-//   return gulp.src("source/sass/style.scss")
-//     .pipe(plumber())
-//     .pipe(sourcemap.init())
-//     .pipe(sass())
-//     .pipe(postcss([
-//       autoprefixer()
-//     ]))
-//     .pipe(rename("style.css"))
-//     .pipe(gulp.dest("build/css"))
-//     .pipe(csso())
-//     .pipe(rename("style.min.css"))
-//     .pipe(sourcemap.write("."))
-//     .pipe(gulp.dest("build/css"))
-//     .pipe(sync.stream());
-// }
-//
-
-// Styles
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -139,7 +120,6 @@ const copy = (done) => {
 }
 
 exports.copy = copy;
-
 
 // Clean
 const clean = () => {
