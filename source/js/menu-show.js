@@ -7,6 +7,7 @@ const hideNavigation = () => {
 }
 
 const showNavigation = () => {
+  closeButton.style.display='block';
   navigation.classList.add('navigation--active');
 }
 
