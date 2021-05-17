@@ -166,6 +166,7 @@
   margin: 0;
   object-fit: contain;
   width: inherit;
+  user-select: none;
 
   @media (min-width: $tablet) {
     min-width: 512px;

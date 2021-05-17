@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 36px 20px 48px 20px;
-  
+
   @media (min-width: $tablet) {
     padding: 58px 0;
   }
@@ -54,6 +54,7 @@
   box-sizing: border-box;
   padding: 15px 15px 17px 15px;
   overflow: hidden;
+  user-select: none;
 
   @media (min-width: $tablet) {
     box-sizing: content-box;

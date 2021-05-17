@@ -74,6 +74,7 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  user-select: none;
 }
 
 .photo__author {
@@ -112,6 +113,15 @@
   }
 }
 
+.photo__like-button {
+  width: auto;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
 .photo__like-icon {
   opacity: 0.3;
 
@@ -125,6 +135,7 @@
   @include paragraph;
   font-weight: bold;
   margin: 0 0 0 14px;
+  user-select: none;
 
   @media (min-width: $tablet) {
     margin: 0 0 0 9px;
