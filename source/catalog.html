@@ -59,6 +59,9 @@
                 <div class="photo">
                   <a class="photo__image-link photo__image-link--wide" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-1-mobile@1x.webp 1x, img/photo-1-mobile@2x.webp 2x">
                       <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
                       <img class="photo__image" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Фото дороги на равнине">
@@ -71,7 +74,6 @@
                       <svg class="photo__like-icon" width="23" height="21" >
                         <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                       </svg>
-
                       <span class="photo__likes-counter">1350</span>
                     </div>
                   </div>
@@ -81,6 +83,9 @@
                 <div class="photo">
                   <a class="photo__image-link" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-2-mobile@1x.webp 1x, img/photo-2-mobile@2x.webp 2x">
                       <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
                       <img class="photo__image" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Фото растительности">
@@ -102,6 +107,9 @@
                 <div class="photo">
                   <a class="photo__image-link" href="">
                     <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-3-mobile@1x.webp 1x, img/photo-3-mobile@2x.webp 2x">
                       <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
                       <img class="photo__image" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Фото дороги на горе">
@@ -123,6 +131,9 @@
                 <div class="photo">
                   <a class="photo__image-link" href="">
                     <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.webp 1x, img/photo-4-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.webp 1x, img/photo-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-4-mobile@1x.webp 1x, img/photo-4-mobile@2x.webp 2x">
                       <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
                       <img class="photo__image" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Фото Моста Дьявола">
@@ -145,7 +156,7 @@
               <h3 class="video__title">Все еще сомневаетесь?</h3>
               <p class="video__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
               <div class="video__wrapper">
-                <video class="video__content" poster="img/video-preview-desktop@1x.jpg"></video>
+                <video class="video__content" poster="img/video-preview-desktop@1x.webp"></video>
                 <div class="video__panel">
                   <button class="video__button video__button--replay">
                     <svg class="video__button-icon" width="16" height="20">
@@ -205,7 +216,7 @@
           <span>Разработано</span>
           <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Сайт разработчика HTML Academy</span>
-            <svg class="footer__developer-image">
+            <svg class="footer__developer-image" widht="27" height="34">
               <use xlink:href="img/icons/sprite.svg#htmlacademy-icon"></use>
             </svg>
           </a>

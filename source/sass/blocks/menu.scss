@@ -25,6 +25,8 @@
   cursor: pointer;
   text-align: center;
   user-select: none;
+  overflow: hidden;
+  max-width: 103x;
 
   &:hover {
     background-color: $blue;
