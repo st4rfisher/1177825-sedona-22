@@ -21,6 +21,7 @@
 
   @media (min-width: $tablet) {
     @include medium-title;
+    margin: 0 60px;
     width: 520px;
     padding: 0;
     margin: 0;
@@ -34,11 +35,10 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    margin: 30px 0 0 0;
-    padding-bottom: 52px;
+    margin: 30px 60px 52px 60px;
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 42px;
+    margin: 30px 60px 42px 60px;
   }
 }

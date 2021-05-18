@@ -26,7 +26,6 @@
   text-align: center;
   user-select: none;
   overflow: hidden;
-  max-width: 103x;
 
   &:hover {
     background-color: $blue;
@@ -50,6 +49,7 @@
     background-color: $white;
     border-top: none;
     border-bottom: none;
+    max-width: 104px;
   }
 }
 
@@ -103,6 +103,7 @@
     color: $black;
     font-weight: bold;
     padding: 0;
+
   }
 
   .menu__item--active & {

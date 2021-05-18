@@ -6,7 +6,7 @@
   padding: 36px 20px 48px 20px;
 
   @media (min-width: $tablet) {
-    padding: 58px 0;
+    padding: 56px 0;
   }
 
   @media (min-width: $desktop) {
@@ -21,7 +21,7 @@
 
   @media (min-width: $tablet) {
     padding: 0;
-    row-gap: 35px;
+    row-gap: 34px;
   }
 }
 
@@ -63,7 +63,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 7px 0 0 0;
+    margin: 9px 0 0 0;
   }
 
   &--disabled {

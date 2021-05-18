@@ -11,6 +11,8 @@
 
 .header__panel {
   position: relative;
+  top:0;
+  left: 0;
   width: 100%;
   height: 56px;
   background-color: $white;
@@ -19,6 +21,7 @@
 
   @media (min-width: $tablet) {
     position: absolute;
+    top: 57px;
     width: 0;
     height: 0;
     padding: 0;

@@ -67,8 +67,8 @@
     padding: 12px 35px 20px 35px;
 
     @media (min-width: $tablet) {
-      padding: 43px 0 0 0;
-      height: 256px;
+      padding: 43px 0 43px 0;
+      min-height: 256px;
     }
 
     @media (min-width: $desktop) {
@@ -85,6 +85,7 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
+    justify-self: center;
   }
 
   .reasons-list__item--second & {
@@ -120,6 +121,8 @@
 
 .reasons-list__number {
   margin: 10px 0 0 0;
+  max-width: 152px;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     .reasons-list__item--first &,
@@ -134,17 +137,19 @@
   text-align: center;
   margin: 10px 0 0 0;
   box-sizing: border-box;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     .reasons-list__item--first &,
     .reasons-list__item--second & {
       margin: 0;
       min-width: 155px;
+      max-width: 192px;
     }
 
     .reasons-list__item--uncolored & {
       margin: 18px 0 0 0;
-      padding: 0 40px;
+      padding: 0 38px;
       line-height: 22px;
     }
   }
