@@ -37,6 +37,10 @@
   @media (min-width: $tablet) {
     display: none;
   }
+
+  &--show {
+    display: block;
+  }
 }
 
 .navigation__close-image {
