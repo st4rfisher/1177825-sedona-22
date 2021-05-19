@@ -36,10 +36,10 @@
   @media (min-width: $tablet) {
     display: none;
   }
-}
 
-.navigation__button-show {
-  display: block;
+  &--show {
+    display: block;
+  }
 }
 
 .navigation__close-image {
