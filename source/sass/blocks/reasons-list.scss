@@ -120,9 +120,12 @@
 }
 
 .reasons-list__number {
+  position: relative;
   margin: 10px 0 0 0;
+  min-width: 70px;
   max-width: 152px;
   overflow: hidden;
+  text-align: center;
 
   @media (min-width: $tablet) {
     .reasons-list__item--first &,
@@ -130,6 +133,36 @@
       margin: 0;
     }
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 13px;
+    height: 1px;
+    width: 6px;
+    background-color: $asphalt;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 12px;
+    height: 1px;
+    width: 6px;
+    background-color: $asphalt;
+  }
+
+  .reasons-list__item--first &::before,
+  .reasons-list__item--first &::after,
+  .reasons-list__item--second &::before,
+  .reasons-list__item--second &::after {
+      margin: 0;
+      background-color: $white;
+    }
 }
 
 .reasons-list__item-paragraph {

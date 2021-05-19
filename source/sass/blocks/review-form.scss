@@ -36,6 +36,7 @@
   padding-bottom: 25px;
 
   @media (min-width: $tablet) {
+    border-left: 1px solid $soft-grey;
     order: 2;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -44,7 +45,6 @@
 
   @media (min-width: $desktop) {
     padding: 0 0 0 78px;
-    border-left: 2px solid $soft-grey;
   }
 }
 
@@ -81,7 +81,6 @@
   @include title;
   text-align: center;
   margin: 0 auto;
-  user-select: none;
   box-sizing: border-box;
   max-width: 400px;
 
@@ -121,6 +120,8 @@
 
 .review-form label {
   @include text;
+  min-width: min-content;
+  overflow: hidden;
 }
 
 .review-form__input {
@@ -139,6 +140,7 @@
   padding: 0;
   margin: 20px 0 0 0;
   row-gap: 20px;
+  list-style: none;
 
   @media (min-width: $tablet) {
     margin: 55px 0 0 0;
@@ -464,7 +466,7 @@
 .review-form__note {
   display: none;
   user-select: none;
-  
+
   @media (min-width: $tablet) {
     @include text;
     display: block;
