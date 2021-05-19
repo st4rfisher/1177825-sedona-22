@@ -3,11 +3,12 @@ const openButton = document.querySelector('.header__toggle');
 const closeButton = navigation.querySelector('.navigation__close-button');
 
 const hideNavigation = () => {
+  closeButton.classList.remove('navigation__button-show');
   navigation.classList.remove('navigation--active');
 }
 
 const showNavigation = () => {
-  closeButton.style.display='block';
+  closeButton.classList.add('navigation__button-show');
   navigation.classList.add('navigation--active');
 }
 

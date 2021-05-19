@@ -71,11 +71,13 @@
   @include title;
   text-align: center;
   margin: 0 auto;
-  max-width: 309px;
   user-select: none;
+  box-sizing: border-box;
+  max-width: 400px;
 
   @media (min-width: $tablet) {
     @include medium-title;
+    padding: 0 60px;
 
     .review-form__fieldset--name &,
     .review-form__fieldset--impression & {
@@ -450,6 +452,7 @@
 
 .review-form__note {
   display: none;
+  user-select: none;
 
   @media (min-width: $tablet) {
     @include text;

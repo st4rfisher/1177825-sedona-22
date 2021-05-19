@@ -38,6 +38,10 @@
   }
 }
 
+.navigation__button-show {
+  display: block;
+}
+
 .navigation__close-image {
   .navigation__close-button:hover & {
     opacity: 0.6;
