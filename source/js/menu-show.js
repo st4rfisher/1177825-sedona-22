@@ -17,6 +17,7 @@ const hideNoJsNavigation = () => {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  openButton.classList.add('header__toggle--show');
   hideNoJsNavigation();
   hideNavigation();
 });

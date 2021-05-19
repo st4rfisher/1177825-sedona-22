@@ -34,17 +34,13 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     background-image: url("../img/welcome-decoration-before.svg");
     background-repeat: no-repeat;
     background-position: center;
     height: 57px;
     width: 100%;
-
-    @media (min-width: $tablet) {
-      bottom: -1px;
-    }
   }
 
   &--inner-block {

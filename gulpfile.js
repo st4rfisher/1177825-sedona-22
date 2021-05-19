@@ -132,7 +132,7 @@ const server = (done) => {
     server: {
       baseDir: 'build'
     },
-    //browser: 'firefox',
+    // browser: 'firefox',
     cors: true,
     notify: false,
     ui: false,

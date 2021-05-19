@@ -20,9 +20,16 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: min-content min-content;
-    background-color: $light-grey;
     padding: 16px 20px 16px 20px;
     margin: 0;
+
+    .photos-list__item:not(.photos-list__item--wide):nth-of-type(2n) & {
+      background-color: $light-grey;
+    }
+
+    .photos-list__item:not(.photos-list__item--wide):nth-of-type(2n-1) & {
+      background-color: $smoky-grey;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -32,6 +39,14 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     color: $white;
+
+    .photos-list__item:not(.photos-list__item--wide):nth-of-type(2n) & {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .photos-list__item:not(.photos-list__item--wide):nth-of-type(2n-1) & {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 
   &--wide {
