@@ -24,3 +24,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 openButton.addEventListener('click', showNavigation);
 closeButton.addEventListener('click', hideNavigation);
+

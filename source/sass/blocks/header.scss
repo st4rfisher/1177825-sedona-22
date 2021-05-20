@@ -56,12 +56,16 @@
   cursor: pointer;
   z-index: 1;
 
-  @media (min-width: $tablet) {
-    display: none;
+  @media (max-width: $tablet) {
+    &--show {
+      display: block;
+    }
   }
 
-  &--show {
-    display: block;
+  @media (min-width: $tablet) {
+    &--show {
+      display: none;
+    }
   }
 }
 

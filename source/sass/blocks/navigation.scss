@@ -34,12 +34,10 @@
   background-color: transparent;
   cursor: pointer;
 
-  @media (min-width: $tablet) {
-    display: none;
-  }
-
-  &--show {
-    display: block;
+  @media (max-width: $tablet) {
+    &--show {
+      display: block;
+    }
   }
 }
 
