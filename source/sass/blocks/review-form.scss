@@ -79,6 +79,7 @@
 
 .review-form__legend {
   @include title;
+  display: block;
   text-align: center;
   margin: 0 auto;
   box-sizing: border-box;
@@ -93,9 +94,11 @@
       margin: 0;
       padding: 0;
       text-align: left;
+      max-width: 290px;
     }
   }
 }
+
 
 .review-form__fieldset--visited {
   padding-bottom: 24px;
@@ -119,8 +122,12 @@
 }
 
 .review-form label {
+  display: block;
   @include text;
+  display: flex;
+  flex-wrap: wrap;
   min-width: min-content;
+  max-width: 200px;
 }
 
 .review-form__input {
@@ -144,9 +151,12 @@
   margin: 20px 0 0 0;
   row-gap: 20px;
   list-style: none;
+  max-width: 100%;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     margin: 55px 0 0 0;
+
   }
 }
 
@@ -279,23 +289,25 @@
   align-items: flex-start;
   justify-content: center;
   row-gap: 43px;
-  margin: 36px 0 0 0;
+  margin: 36px auto 0 auto;
   padding: 0 0 0 79px;
-
+  max-width: 200px;
 
   @media (min-width: $tablet) {
-    margin: 72px 0 0 0;
+    margin: 50px 0 0 0;
     row-gap: 52px;
-    padding: 0 0 0 75px;
+    padding: 21px 0 15px 75px;
   }
 
   @media (min-width: $desktop) {
+    margin: 72px 0 0 0;
     padding: 0;
   }
 }
 
 .review-form__impression-item {
   position: relative;
+  max-width: 200px;
 }
 
 .review-form__radio + .review-form__label::before {
@@ -310,12 +322,12 @@
   border-radius: 50%;
 
   @media (min-width: $tablet) {
-    bottom: -12px;
+    top: -16px;
     left: -74px;
   }
 
   @media (min-width: $desktop) {
-    bottom: -12px;
+    top: -12px;
     left: -74px;
   }
 
@@ -352,8 +364,10 @@
   white-space: nowrap;
   list-style: none;
   row-gap: 24px;
-  margin: 21px 0 0;
-  padding-left: 0;
+  padding: 0;
+  margin: 21px auto 0 auto;
+  max-width: 280px;
+
 
   @media (min-width: $tablet) {
     display: grid;
@@ -361,25 +375,39 @@
     grid-template-rows: min-content min-content;
     justify-content: center;
     margin: 45px 0 0 0;
-    column-gap: 72px;
+    column-gap: 60px;
     row-gap: 32px;
-    padding-left: 0;
+    max-width: 100%;
   }
 
   @media (min-width: $desktop) {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    column-gap: 70px;
+    column-gap: 52px;
   }
 }
 
 .review-form__visited-item {
   position: relative;
-  padding: 15px 0 15px 80px;
-  max-width: 120px;
-
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 0px 0 79px;
+  box-sizing: border-box;
+  width: 201px;
+  height: 56px;
   overflow: hidden;
+
+  @media (min-width: $tablet) {
+    padding: 0px 0px 0 81px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0px 0px 0 74px;
+    justify-content: center;
+  }
 }
 
 
@@ -393,6 +421,10 @@
   box-sizing: border-box;
   border-radius: 3px;
   background-color: $light-grey;
+
+  @media (min-width: $tablet) {
+    left: 4px;
+  }
 
   .review-form__visited-item:hover & {
     background-color: $smoky-white;
@@ -409,6 +441,10 @@
   background: url("../img/icons/check-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @media (min-width: $tablet) {
+    left: 22px;
+  }
 
   .review-form__visited-item:active & {
     opacity: 0.3;
