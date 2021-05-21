@@ -6,10 +6,10 @@
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="img/icons/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" href="img/icons/favicon32x32.png" sizes="32x32" type="image/png">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="favicon.ico">
-    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
-    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsans.woff2" crossorigin="anonymous" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" crossorigin="anonymous" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -140,7 +140,7 @@
               <textarea class="review-form__textarea" placeholder="Опишите подробно все свои восторги" name="textarea" id="textarea"></textarea>
             </fieldset>
 
-            <button class="review-form__button" type="submit">Отправить отзыв</button>
+            <button class="review-form__button" type="submit" disabled>Отправить отзыв</button>
 
             <p class="review-form__note">* — обязательные поля</p>
           </form>
@@ -184,22 +184,22 @@
       </div>
     </footer>
 
-    <div class="error-alert" aria-label="Оповещение об ошибке">
-      <div class="error-alert__wrapper">
-        <p class="error-alert__title">Что-то пошло не так!</p>
-        <p class="error-alert__paragraph">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="error-alert__button" type="button"><span>Ок</span></button>
+    <div class="error-popup" aria-label="Оповещение об ошибке">
+      <div class="error-popup__wrapper">
+        <p class="error-popup__title">Что-то пошло не так!</p>
+        <p class="error-popup__paragraph">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="error-popup__button" type="button"><span>Ок</span></button>
       </div>
     </div>
 
-    <div class="alert" aria-label="Оповещение об отправке отзыва">
-      <div class="alert__wrapper">
-        <header class="alert__header">
-          <p class="alert__title">Ваш отзыв отправлен!</p>
-          <p class="alert__paragraph">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br> В ближайшее время мы опубликуем его на сайте.</p>
+    <div class="message-popup" aria-label="Оповещение об отправке отзыва">
+      <div class="message-popup__wrapper">
+        <header class="message-popup__header">
+          <p class="message-popup__title">Ваш отзыв отправлен!</p>
+          <p class="message-popup__paragraph">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br> В ближайшее время мы опубликуем его на сайте.</p>
         </header>
-        <footer class="alert__footer">
-          <button class="alert__button" type="button"><span>Закрыть окно</span></button>
+        <footer class="message-popup__footer">
+          <button class="message-popup__button" type="button"><span>Закрыть окно</span></button>
         </footer>
       </div>
     </div>

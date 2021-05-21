@@ -145,7 +145,7 @@
     background-color: $asphalt;
   }
 
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     bottom: 50%;
@@ -160,9 +160,9 @@
   .reasons-list__item--first &::after,
   .reasons-list__item--second &::before,
   .reasons-list__item--second &::after {
-      margin: 0;
-      background-color: $white;
-    }
+    margin: 0;
+    background-color: $white;
+  }
 }
 
 .reasons-list__item-paragraph {

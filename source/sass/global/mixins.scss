@@ -68,7 +68,7 @@
     background-color: $blue;
   }
 
-  &:focus {
+  &:active {
     background-color: $dark-blue;
     color: rgba(255, 255, 255, 0.3);
   }
@@ -76,4 +76,18 @@
 
 @mixin disabled-button-link {
   background-color: $smoky-white;
+  color: $white;
+  cursor: auto;
+
+  &:hover {
+    background-color: $smoky-white;
+  }
+
+  &:active {
+    background-color: $smoky-white;
+  }
+
+  &:focus {
+    background-color: $smoky-white;
+  }
 }

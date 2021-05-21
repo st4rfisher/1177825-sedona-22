@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 26px 0 0 0;
+    margin: 39px 0 0 0;
     padding: 0 201px 0 199px;
   }
 }
@@ -39,10 +39,6 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    padding: 0 60px;
-  }
-
-  @media (min-width: $desktop) {
     padding: 0;
   }
 }

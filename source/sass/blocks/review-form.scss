@@ -122,7 +122,6 @@
 }
 
 .review-form label {
-  display: block;
   @include text;
   display: flex;
   flex-wrap: wrap;
@@ -156,7 +155,6 @@
 
   @media (min-width: $tablet) {
     margin: 55px 0 0 0;
-
   }
 }
 
@@ -322,12 +320,7 @@
   border-radius: 50%;
 
   @media (min-width: $tablet) {
-    top: -16px;
-    left: -74px;
-  }
-
-  @media (min-width: $desktop) {
-    top: -12px;
+    top: -15px;
     left: -74px;
   }
 
@@ -348,7 +341,7 @@
 
   @media (min-width: $tablet) {
     left: -58px;
-    top: 0;
+    top: 1px;
   }
 
   .review-form__impression-item:active & {
@@ -393,19 +386,19 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0px 0px 0 79px;
+  padding: 0 0 0 79px;
   box-sizing: border-box;
   width: 201px;
   height: 56px;
   overflow: hidden;
 
   @media (min-width: $tablet) {
-    padding: 0px 0px 0 81px;
+    padding: 0 0 0 81px;
     justify-content: flex-start;
   }
 
   @media (min-width: $desktop) {
-    padding: 0px 0px 0 74px;
+    padding: 0 0 0 74px;
     justify-content: center;
   }
 }
@@ -414,7 +407,7 @@
 .review-form__checkbox + label::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -1px;
   width: 56px;
   height: 55px;
@@ -509,6 +502,10 @@
 
   @media (min-width: $desktop) {
     padding: 19px 32px 13px 32px;
+  }
+
+  &[disabled] {
+    @include disabled-button-link;
   }
 }
 

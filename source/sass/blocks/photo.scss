@@ -1,11 +1,16 @@
 .photo {
-  padding: 22px 20px 19px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px 20px 17px 20px;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     padding: 0;
   }
 
   @media (min-width: $desktop) {
+    height: auto;
     position: relative;
   }
 }
@@ -15,6 +20,8 @@
   flex-direction: column;
   box-sizing: border-box;
   margin: 10px 0 0 0;
+  height: 100%;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     display: grid;
@@ -22,6 +29,7 @@
     grid-template-rows: min-content min-content;
     padding: 16px 20px 16px 20px;
     margin: 0;
+    background-color: $light-grey;
 
     .photos-list__item:not(.photos-list__item--wide):nth-of-type(2n) & {
       background-color: $light-grey;
@@ -39,6 +47,7 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     color: $white;
+    height: auto;
 
     .photos-list__item:not(.photos-list__item--wide):nth-of-type(2n) & {
       background-color: rgba(0, 0, 0, 0.3);
@@ -105,7 +114,7 @@
 
 .photo__likes {
   display: flex;
-  margin: 11px 0 0 0;
+  margin: 12px 0 0 0;
 
   @media (min-width: $tablet) {
     justify-self: flex-start;
@@ -151,6 +160,7 @@
   font-weight: bold;
   margin: 0 0 0 14px;
   user-select: none;
+  max-width: 100px;
 
   @media (min-width: $tablet) {
     margin: 0 0 0 9px;
