@@ -1,24 +1,20 @@
 .popup {
   position: fixed;
   display: none;
-  top: 300px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  padding: 0;
+  transform: translateX(-50%) translateY(-50%);
   width: 320px;
-  min-height: 280px;
   background-color: $white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   @media (min-width: $tablet) {
     &--error {
-      min-width: 400px;
-      min-height: 347px;
+      width: 400px;
     }
 
     &--message {
-      min-width: 640px;
-      min-height: 347px;
+      width: 640px;
     }
   }
 
@@ -29,17 +25,13 @@
 
 .popup__wrapper {
   display: flex;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   box-sizing: border-box;
   padding: 41px 43px 34px 40px;
   row-gap: 24px;
 
   @media (min-width: $tablet) {
-    padding: 50px 42px 50px 41px;
+    padding: 49px 42px 50px 40px;
     row-gap: 0;
   }
 }
@@ -67,7 +59,6 @@
   @include paragraph;
   text-align: center;
   margin: 0;
-  padding: 0;
 
   &--error {
     @media (min-width: $tablet) {
@@ -78,8 +69,6 @@
 
 .popup__header {
   display: flex;
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   row-gap: 27px;
   box-sizing: border-box;
@@ -101,15 +90,12 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  height: 100%;
-  width: 100%;
   box-sizing: border-box;
   padding: 20px;
   background-color: $light-grey;
 
   @media (min-width: $tablet) {
-    min-height: 146px;
-    padding: 44px 44px 43px 44px;
+    padding: 45px 44px 43px 44px;
   }
 }
 
@@ -118,26 +104,24 @@
   @include button-link;
   @include title;
   box-sizing: border-box;
-  min-height: 58px;
+  align-self: center;
 
   @media (min-width: $tablet) {
     @include medium-title;
   }
 
   &--error {
-    min-width: 180px;
-    max-width: 280px;
-    padding: 10px 20px;
+    width: 180px;
+    padding: 19px 20px 13px 20px;
 
     @media (min-width: $tablet) {
-      min-width: 272px;
+      width: 272px;
     }
   }
 
   &--message {
-    padding: 14px 22px 10px 20px;
-    align-self: center;
     width: 100%;
+    padding: 18px 22px 14px 20px;
 
     @media (min-width: $tablet) {
       width: 458px;

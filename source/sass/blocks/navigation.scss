@@ -33,7 +33,7 @@
   background-color: transparent;
   cursor: pointer;
 
-  @media (max-width: $tablet) {
+  @media (max-width: 767px) {
     &--show {
       display: block;
     }

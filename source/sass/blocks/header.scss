@@ -57,12 +57,6 @@
       display: block;
     }
   }
-
-  @media (min-width: $tablet) {
-    &--show {
-      display: none;
-    }
-  }
 }
 
 .header__toggle-image {
