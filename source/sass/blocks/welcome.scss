@@ -3,7 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $blue url("../img/welcome-background-mobile@1x.jpg") no-repeat center;
+  background-color: $blue;
+  background-image: url("../img/welcome-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   box-sizing: border-box;
   padding: 0 20px;

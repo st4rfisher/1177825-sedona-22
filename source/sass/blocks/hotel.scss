@@ -29,6 +29,7 @@
   @include title;
   font-size: 21px;
   margin: 0;
+  text-align: center;
 
   @media (min-width: $tablet) {
     @include big-title;
@@ -50,13 +51,12 @@
 .hotel__search-link {
   @include button-link;
   @include medium-title;
-  width: 100%;
   box-sizing: border-box;
   padding: 15px 15px 17px 15px;
-  overflow: hidden;
   user-select: none;
 
   @media (min-width: $tablet) {
+    width: 458px;
     box-sizing: content-box;
     padding: 15px 12px 17px 12px;
     margin: 0;

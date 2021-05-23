@@ -26,7 +26,7 @@
   }
 }
 
-.review-form__fieldset:not(:nth-of-type(1)):not(:nth-of-type(3)) {
+.review-form__fieldset:not(.review-form__fieldset--name):not(.review-form__fieldset--impression) {
   @media (min-width: $tablet) {
     border-top: 1px solid $smoky-white;
   }
@@ -151,7 +151,6 @@
   row-gap: 20px;
   list-style: none;
   max-width: 100%;
-  overflow: hidden;
 
   @media (min-width: $tablet) {
     margin: 55px 0 0 0;
@@ -166,7 +165,7 @@
 
 .review-form__name-item label {
   margin-right: 14px;
-  user-select: none;
+  word-break: normal;
 }
 
 .review-form__name-item input {
@@ -361,7 +360,6 @@
   margin: 21px auto 0 auto;
   max-width: 280px;
 
-
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: min-content min-content;
@@ -390,7 +388,6 @@
   box-sizing: border-box;
   width: 201px;
   height: 56px;
-  overflow: hidden;
 
   @media (min-width: $tablet) {
     padding: 0 0 0 81px;
@@ -430,7 +427,7 @@
   left: 16px;
   width: 23px;
   height: 16px;
-  background: url("../img/icons/check-icon.svg");
+  background-image: url("../img/icons/check-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -503,7 +500,7 @@
     padding: 19px 32px 13px 32px;
   }
 
-  &[disabled] {
+  &:disabled {
     @include disabled-button-link;
   }
 }

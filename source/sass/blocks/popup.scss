@@ -1,0 +1,146 @@
+.popup {
+  position: fixed;
+  display: none;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  width: 320px;
+  min-height: 280px;
+  background-color: $white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: $tablet) {
+    &--error {
+      min-width: 400px;
+      min-height: 347px;
+    }
+
+    &--message {
+      min-width: 640px;
+      min-height: 347px;
+    }
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+.popup__wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 41px 43px 34px 40px;
+  row-gap: 24px;
+
+  @media (min-width: $tablet) {
+    padding: 50px 42px 50px 41px;
+    row-gap: 0;
+  }
+}
+
+.popup__title {
+  @include title;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    @include big-title;
+  }
+
+  &--error {
+    max-width: 280px;
+
+    @media (min-width: $tablet) {
+      padding: 0 40px;
+      line-height: 40px;
+    }
+  }
+}
+
+.popup__paragraph {
+  @include paragraph;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  &--error {
+    @media (min-width: $tablet) {
+      margin: 24px 0 37px;
+    }
+  }
+}
+
+.popup__header {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 27px;
+  box-sizing: border-box;
+  padding: 39px 42px 37px 41px;
+  background-color: $white;
+
+  @media (min-width: $tablet) {
+    min-height: 201px;
+    row-gap: 31px;
+    padding: 50px 50px 36px 50px;
+  }
+
+  @media (min-width: $desktop) {
+    row-gap: 35px;
+  }
+}
+
+.popup__footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: $light-grey;
+
+  @media (min-width: $tablet) {
+    min-height: 146px;
+    padding: 44px 44px 43px 44px;
+  }
+}
+
+
+.popup__button {
+  @include button-link;
+  @include title;
+  box-sizing: border-box;
+  min-height: 58px;
+
+  @media (min-width: $tablet) {
+    @include medium-title;
+  }
+
+  &--error {
+    min-width: 180px;
+    max-width: 280px;
+    padding: 10px 20px;
+
+    @media (min-width: $tablet) {
+      min-width: 272px;
+    }
+  }
+
+  &--message {
+    padding: 14px 22px 10px 20px;
+    align-self: center;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      width: 458px;
+    }
+  }
+}
