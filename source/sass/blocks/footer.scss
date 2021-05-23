@@ -29,6 +29,7 @@
   text-align: center;
   cursor: pointer;
   color: $black;
+  max-width: 200px;
 }
 
 .footer__developer {
@@ -36,6 +37,10 @@
   display: flex;
   align-items: center;
   column-gap: 13px;
+}
+
+.footer__developer span {
+  max-width: 200px;
 }
 
 .footer__developer-link {

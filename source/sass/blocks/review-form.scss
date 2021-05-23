@@ -123,10 +123,6 @@
 
 .review-form label {
   @include text;
-  display: flex;
-  flex-wrap: wrap;
-  min-width: min-content;
-  max-width: 200px;
 }
 
 .review-form__input {
@@ -277,6 +273,7 @@
   text-transform: none;
   user-select: none;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .review-form__impression-list {
@@ -353,7 +350,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  white-space: nowrap;
   list-style: none;
   row-gap: 24px;
   padding: 0;
@@ -387,7 +383,7 @@
   padding: 0 0 0 79px;
   box-sizing: border-box;
   width: 201px;
-  height: 56px;
+  min-height: 56px;
 
   @media (min-width: $tablet) {
     padding: 0 0 0 81px;
