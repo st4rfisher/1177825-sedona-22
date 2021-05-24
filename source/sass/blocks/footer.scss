@@ -13,11 +13,11 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 20px 60px;
   }
 
   @media (min-width: $desktop) {
-    padding: 0 120px;
+    padding: 20px 120px;
   }
 }
 
