@@ -345,7 +345,7 @@
   }
 }
 
-.review-form__radio:focus-visible + label::before {
+.review-form__radio:focus + label::before {
   border: 4px solid $dark-grey;
   border-radius: 50%;
   background-color: $smoky-white;
@@ -442,7 +442,7 @@
   }
 }
 
-.review-form__checkbox:focus-visible + label::before {
+.review-form__checkbox:focus + label::before {
   border: 4px solid $dark-grey;
   border-radius: 6px;
   background-color: $smoky-white;
@@ -510,10 +510,6 @@
 
   &:disabled {
     @include disabled-button-link;
-  }
-
-  &:focus-visible {
-    outline: 4px solid $dark-grey;
   }
 }
 

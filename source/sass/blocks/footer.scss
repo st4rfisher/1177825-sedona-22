@@ -30,10 +30,6 @@
   cursor: pointer;
   color: $black;
   max-width: 200px;
-
-  &:focus-visible {
-    outline: 4px solid $dark-grey;
-  }
 }
 
 .footer__developer {
@@ -50,10 +46,6 @@
 .footer__developer-link {
   display: block;
   margin-top: 5px;
-
-  &:focus-visible {
-    outline: 4px solid $dark-grey;
-  }
 }
 
 .footer__developer-image {

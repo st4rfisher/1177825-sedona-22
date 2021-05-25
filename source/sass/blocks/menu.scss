@@ -96,10 +96,6 @@
     }
   }
 
-  &:focus-visible {
-    outline: 4px solid $dark-grey;
-  }
-
   @media (min-width: $tablet) {
     @include text;
     color: $black;
