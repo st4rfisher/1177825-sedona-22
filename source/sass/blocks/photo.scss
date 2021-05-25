@@ -79,6 +79,10 @@
   display: block;
   height: 280px;
 
+  &:focus-visible {
+    outline: 4px solid $dark-grey;
+  }
+
   @media (min-width: $tablet) {
     height: 267px;
   }
@@ -141,6 +145,10 @@
   background: none;
   padding: 0;
   margin: 0;
+
+  &:focus-visible {
+    outline: 4px solid $dark-grey;
+  }
 }
 
 .photo__like-icon {

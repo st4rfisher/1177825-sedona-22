@@ -27,6 +27,10 @@
     color: $dark-blue;
   }
 
+  &:focus-visible {
+    outline: 4px solid $dark-grey;
+  }
+
   @media (min-width: $tablet) {
     width: 46px;
     height: 48px;
